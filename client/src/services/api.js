@@ -100,3 +100,4 @@ export const SlidePilotService = {
 export const SuiteStatsService = {
   getStats: () => fetchJson('/stats/suite'),
 };
+

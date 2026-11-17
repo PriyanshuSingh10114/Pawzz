@@ -7,3 +7,4 @@ router.post('/generate-carousel', handleGenerateCarousel);
 router.post('/regenerate-slide', handleRegenerateSlide);
 
 export default router;
+

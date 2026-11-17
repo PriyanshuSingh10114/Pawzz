@@ -83,3 +83,4 @@ The suite comprises three interconnected products:
 NexaStudio is designed to be **founder-ready out of the box**:
 - **Zero-Config Demo Mode**: When `MONGODB_URI` or `OPENAI_API_KEY` are not provided, the application runs seamlessly using a resilient in-memory datastore with pre-seeded realistic clinics and courses, and a rule-based intelligent AI synthesizer.
 - **Production Mode**: When secrets are provided in `server/.env`, the system automatically connects to live MongoDB Atlas and OpenAI `gpt-4o-mini`.
+

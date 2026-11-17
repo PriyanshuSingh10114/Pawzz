@@ -800,3 +800,4 @@ export const initialWorkflowLogs = [
     ]
   }
 ];
+

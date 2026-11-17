@@ -1,7 +1,6 @@
 import { isDbConnected } from '../config/db.js';
 import { EnquiryModel } from '../models/Enquiry.js';
-
-let inMemoryEnquiries = [];
+import { getLocalStore, saveLocalStore } from '../data/localStore.js';
 
 export async function submitEnquiry(req, res) {
   try {
@@ -63,8 +62,9 @@ export async function submitEnquiry(req, res) {
       });
     }
 
-    // In-memory duplicate check
-    const existingMemory = inMemoryEnquiries.find(
+    // Persistent demo store duplicate check
+    const store = getLocalStore();
+    const existingMemory = store.enquiries.find(
       e => e.email === cleanEmail && e.programmeInterested === programmeInterested
     );
 
@@ -86,7 +86,8 @@ export async function submitEnquiry(req, res) {
       status: 'New',
       createdAt: new Date().toISOString(),
     };
-    inMemoryEnquiries.unshift(demoEnquiry);
+    store.enquiries.unshift(demoEnquiry);
+    saveLocalStore();
 
     return res.status(201).json({
       success: true,
@@ -104,8 +105,10 @@ export async function getEnquiries(req, res) {
       const enquiries = await EnquiryModel.find().sort({ createdAt: -1 }).lean();
       return res.json({ success: true, data: enquiries });
     }
-    return res.json({ success: true, data: inMemoryEnquiries, source: 'demo-memory' });
+    const store = getLocalStore();
+    return res.json({ success: true, data: store.enquiries, source: 'demo-local-store' });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }
 }
+

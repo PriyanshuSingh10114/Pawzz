@@ -7,3 +7,4 @@ router.post('/', submitEnquiry);
 router.get('/', getEnquiries);
 
 export default router;
+

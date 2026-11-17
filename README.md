@@ -198,3 +198,4 @@ node server/test-api.js
 5. **Inspect n8n Automation (`/slidepilot/workflow`)**:
    - Click "Dispatch Webhook Event" to test the live inbound webhook pipeline.
    - Observe the new project appear under "In Review" in the audit log.
+

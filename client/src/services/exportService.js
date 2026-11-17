@@ -68,3 +68,4 @@ export async function exportCarouselToPdf({
   pdf.save(`${sanitizedTitle}_Carousel.pdf`);
   return true;
 }
+

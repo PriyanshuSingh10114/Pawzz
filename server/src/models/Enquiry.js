@@ -21,3 +21,4 @@ const enquirySchema = new mongoose.Schema(
 enquirySchema.index({ email: 1, programmeInterested: 1 });
 
 export const EnquiryModel = mongoose.models.Enquiry || mongoose.model('Enquiry', enquirySchema);
+

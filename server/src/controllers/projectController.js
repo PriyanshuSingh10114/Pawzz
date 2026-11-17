@@ -1,8 +1,6 @@
 import { isDbConnected } from '../config/db.js';
 import { ProjectModel } from '../models/Project.js';
-import { initialProjects } from '../data/seedData.js';
-
-let inMemoryProjects = [...initialProjects];
+import { getLocalStore, saveLocalStore } from '../data/localStore.js';
 
 export async function getProjects(req, res) {
   try {
@@ -30,7 +28,8 @@ export async function getProjects(req, res) {
       });
     }
 
-    let filtered = [...inMemoryProjects];
+    const store = getLocalStore();
+    let filtered = [...store.projects];
     if (status && status !== 'All') {
       filtered = filtered.filter(p => p.status === status);
     }
@@ -74,12 +73,13 @@ export async function getProjectById(req, res) {
       return res.json({ success: true, data: project });
     }
 
-    const project = inMemoryProjects.find(p => p.id === id || p._id === id);
+    const store = getLocalStore();
+    const project = store.projects.find(p => p.id === id || p._id === id);
     if (!project) {
       return res.status(404).json({ success: false, message: 'Project not found' });
     }
 
-    return res.json({ success: true, data: project, source: 'demo-memory' });
+    return res.json({ success: true, data: project, source: 'demo-local-store' });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }
@@ -108,9 +108,11 @@ export async function createProject(req, res) {
       updatedAt: new Date().toISOString(),
       status: projectData.status || 'Draft',
     };
-    inMemoryProjects.unshift(newProject);
+    const store = getLocalStore();
+    store.projects.unshift(newProject);
+    saveLocalStore();
 
-    return res.status(201).json({ success: true, data: newProject, source: 'demo-memory' });
+    return res.status(201).json({ success: true, data: newProject, source: 'demo-local-store' });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }
@@ -133,18 +135,20 @@ export async function updateProject(req, res) {
       return res.json({ success: true, data: updated });
     }
 
-    const index = inMemoryProjects.findIndex(p => p.id === id || p._id === id);
+    const store = getLocalStore();
+    const index = store.projects.findIndex(p => p.id === id || p._id === id);
     if (index === -1) {
       return res.status(404).json({ success: false, message: 'Project not found' });
     }
 
-    inMemoryProjects[index] = {
-      ...inMemoryProjects[index],
+    store.projects[index] = {
+      ...store.projects[index],
       ...updates,
       updatedAt: new Date().toISOString(),
     };
+    saveLocalStore();
 
-    return res.json({ success: true, data: inMemoryProjects[index], source: 'demo-memory' });
+    return res.json({ success: true, data: store.projects[index], source: 'demo-local-store' });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }
@@ -162,14 +166,17 @@ export async function deleteProject(req, res) {
       return res.json({ success: true, message: 'Project deleted successfully' });
     }
 
-    const index = inMemoryProjects.findIndex(p => p.id === id || p._id === id);
+    const store = getLocalStore();
+    const index = store.projects.findIndex(p => p.id === id || p._id === id);
     if (index === -1) {
       return res.status(404).json({ success: false, message: 'Project not found' });
     }
 
-    inMemoryProjects.splice(index, 1);
+    store.projects.splice(index, 1);
+    saveLocalStore();
     return res.json({ success: true, message: 'Project deleted successfully' });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }
 }
+

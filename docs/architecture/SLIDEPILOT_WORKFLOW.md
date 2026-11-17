@@ -71,3 +71,4 @@ SlidePilot enforces a four-stage state machine:
 2. **In Review**: Webhook or newly generated project awaiting visual proofing.
 3. **Approved**: Founder has reviewed every slide and confirmed accuracy.
 4. **Exported**: Carousel exported to PDF/PNG and archived in project history.
+

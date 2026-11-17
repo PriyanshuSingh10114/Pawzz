@@ -1,8 +1,5 @@
 import { ENV } from '../../config/env.js';
-import { initialWorkflowLogs } from '../../data/seedData.js';
-
-// In-memory log buffer when DB is not connected
-let memoryLogs = [...initialWorkflowLogs];
+import { getLocalStore, saveLocalStore } from '../../data/localStore.js';
 
 export async function logWorkflowExecution({
   source = 'Native AI Engine',
@@ -33,14 +30,17 @@ export async function logWorkflowExecution({
     ],
   };
 
-  memoryLogs.unshift(logEntry);
-  if (memoryLogs.length > 50) memoryLogs.pop();
+  const store = getLocalStore();
+  store.workflowLogs.unshift(logEntry);
+  if (store.workflowLogs.length > 50) store.workflowLogs.pop();
+  saveLocalStore();
 
   return logEntry;
 }
 
 export function getWorkflowLogs() {
-  return memoryLogs;
+  const store = getLocalStore();
+  return store.workflowLogs;
 }
 
 export async function triggerN8nWebhook(payload) {
@@ -72,3 +72,4 @@ export async function triggerN8nWebhook(payload) {
     };
   }
 }
+

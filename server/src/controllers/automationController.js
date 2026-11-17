@@ -116,3 +116,4 @@ export async function testN8nTrigger(req, res) {
     result: dispatchResult,
   });
 }
+

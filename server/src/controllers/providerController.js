@@ -1,10 +1,7 @@
 import { isDbConnected } from '../config/db.js';
 import { ProviderModel } from '../models/Provider.js';
 import { CorrectionModel } from '../models/Correction.js';
-import { initialProviders } from '../data/seedData.js';
-
-let inMemoryProviders = [...initialProviders];
-let inMemoryCorrections = [];
+import { getLocalStore, saveLocalStore } from '../data/localStore.js';
 
 export async function getProviders(req, res) {
   try {
@@ -61,8 +58,9 @@ export async function getProviders(req, res) {
       });
     }
 
-    // In-memory demo filter
-    let filtered = [...inMemoryProviders];
+    // Persistent demo store filter
+    const store = getLocalStore();
+    let filtered = [...store.providers];
 
     if (search) {
       const q = search.toLowerCase();
@@ -127,7 +125,8 @@ export async function getProviderById(req, res) {
       return res.json({ success: true, data: provider });
     }
 
-    const provider = inMemoryProviders.find(p => p.id === id || p._id === id);
+    const store = getLocalStore();
+    const provider = store.providers.find(p => p.id === id || p._id === id);
     if (!provider) {
       return res.status(404).json({ success: false, message: 'Provider not found' });
     }
@@ -216,11 +215,13 @@ export async function createProvider(req, res) {
       id: `pawnexus-prov-${Date.now()}`,
       _id: `pawnexus-prov-${Date.now()}`,
     };
-    inMemoryProviders.unshift(demoProvider);
+    const store = getLocalStore();
+    store.providers.unshift(demoProvider);
+    saveLocalStore();
 
     return res.status(201).json({
       success: true,
-      message: 'Provider listing submitted successfully! (Saved in Demo Session)',
+      message: 'Provider listing submitted successfully! (Saved & Persisted)',
       data: demoProvider,
     });
   } catch (error) {
@@ -249,11 +250,12 @@ export async function submitCorrection(req, res) {
 
     // Find provider name
     let providerName = 'Unknown Provider';
+    const store = getLocalStore();
     if (isDbConnected()) {
       const p = await ProviderModel.findById(id);
       if (p) providerName = p.name;
     } else {
-      const p = inMemoryProviders.find(prov => prov.id === id || prov._id === id);
+      const p = store.providers.find(prov => prov.id === id || prov._id === id);
       if (p) providerName = p.name;
     }
 
@@ -283,7 +285,8 @@ export async function submitCorrection(req, res) {
       ...correctionData,
       id: `corr-${Date.now()}`,
     };
-    inMemoryCorrections.push(demoCorrection);
+    store.corrections.push(demoCorrection);
+    saveLocalStore();
 
     return res.status(201).json({
       success: true,
@@ -294,3 +297,4 @@ export async function submitCorrection(req, res) {
     return res.status(500).json({ success: false, message: error.message });
   }
 }
+

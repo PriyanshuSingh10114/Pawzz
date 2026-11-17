@@ -289,3 +289,4 @@ export default function RegisterProviderModal({ isOpen, onClose, onProviderAdded
     </div>
   );
 }
+

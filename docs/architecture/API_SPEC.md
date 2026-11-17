@@ -147,3 +147,4 @@ Inbound webhook endpoint receiving trigger ideas from n8n, Slack, or external CR
 - Runs structured AI generation
 - Creates draft project with `status: "In Review"`
 - Mandates founder approval before export
+

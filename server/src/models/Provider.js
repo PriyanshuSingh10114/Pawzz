@@ -45,3 +45,4 @@ const providerSchema = new mongoose.Schema(
 providerSchema.index({ name: 'text', address: 'text', city: 'text' });
 
 export const ProviderModel = mongoose.models.Provider || mongoose.model('Provider', providerSchema);
+

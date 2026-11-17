@@ -9,3 +9,4 @@ export const ENV = {
   N8N_WEBHOOK_URL: process.env.N8N_WEBHOOK_URL || '',
   DEMO_MODE: process.env.DEMO_MODE !== 'false', // Default to true for safe, seamless local execution
 };
+

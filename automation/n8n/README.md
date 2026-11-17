@@ -61,3 +61,4 @@ curl -X POST http://localhost:5678/webhook/slidepilot-idea-trigger \
 ```
 
 SlidePilot will immediately ingest the payload, generate the slide cards, set the status to **In Review**, and surface it on the SlidePilot Dashboard under **Workflow History**.
+
