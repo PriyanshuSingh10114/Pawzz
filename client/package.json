@@ -1,5 +1,6 @@
 {
-  "name": "nexastudio-client",
+  "name": "pawzz-client",
+  "author": "Priyanshu Singh <priyanshusingh22340@gmail.com>",
   "private": true,
   "version": "1.0.0",
   "type": "module",

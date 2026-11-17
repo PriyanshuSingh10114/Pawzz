@@ -32,15 +32,15 @@ export default function Navbar() {
           {/* Logo & Product Switcher */}
           <div className="flex items-center gap-4">
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white shadow-sm font-black text-lg">
-                N
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-600 flex items-center justify-center text-white shadow-sm font-black text-lg">
+                🐾
               </div>
               <div className="flex flex-col">
                 <span className="font-extrabold text-slate-900 tracking-tight text-base leading-none">
-                  Nexa<span className="text-brand-600">Studio</span>
+                  Paw<span className="text-emerald-600">zz</span>
                 </span>
                 <span className="text-[10px] text-slate-400 font-semibold tracking-wider uppercase mt-0.5">
-                  Product Suite
+                  Platform Suite
                 </span>
               </div>
             </Link>
@@ -69,17 +69,17 @@ export default function Navbar() {
                   onClick={() => setProductDropdownOpen(false)}
                 >
                   <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1.5">
-                    NexaStudio Products
+                    Pawzz Platform Products
                   </div>
                   <Link
                     to="/"
                     className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 group-hover:bg-brand-50 group-hover:text-brand-600">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-700 group-hover:bg-emerald-100">
                       <Compass className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-slate-900">NexaStudio Central</div>
+                      <div className="text-xs font-bold text-slate-900">Pawzz Suite Hub</div>
                       <div className="text-[11px] text-slate-500">Executive hub & metrics</div>
                     </div>
                   </Link>

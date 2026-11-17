@@ -1,13 +1,16 @@
 {
-  "name": "nexastudio-monorepo",
+  "name": "pawzz",
   "version": "1.0.0",
-  "description": "NexaStudio — PawNexus, SkillSpring AI, SlidePilot unified product suite",
+  "description": "Pawzz — Animal healthcare discovery, practical AI education & SlidePilot carousel automation suite",
+  "author": "Priyanshu Singh <priyanshusingh22340@gmail.com>",
   "private": true,
   "scripts": {
     "client:dev": "npm --prefix client run dev",
     "client:build": "npm --prefix client run build",
     "server:start": "npm --prefix server start",
-    "server:dev": "npm --prefix server run dev"
+    "server:dev": "npm --prefix server run dev",
+    "test:api": "node server/test-api.js",
+    "test:persistence": "node server/test-restart-persistence.js"
   }
 }
 

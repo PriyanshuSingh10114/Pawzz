@@ -1,7 +1,8 @@
 {
-  "name": "nexastudio-server",
+  "name": "pawzz-server",
   "version": "1.0.0",
-  "description": "NexaStudio Unified Backend API",
+  "description": "Pawzz Unified Backend API",
+  "author": "Priyanshu Singh <priyanshusingh22340@gmail.com>",
   "main": "src/index.js",
   "type": "module",
   "scripts": {

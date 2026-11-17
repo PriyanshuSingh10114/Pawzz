@@ -10,19 +10,19 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white font-extrabold text-base">
-                N
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-600 flex items-center justify-center text-white font-extrabold text-base">
+                🐾
               </div>
               <span className="font-extrabold text-white text-lg tracking-tight">
-                Nexa<span className="text-brand-500">Studio</span>
+                Paw<span className="text-emerald-500">zz</span>
               </span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              An interconnected digital product suite demonstrating founder-grade UI/UX architecture, production-ready AI workflows, and resilient engineering.
+              Animal healthcare discovery, practical AI engineering cohorts, and autonomous carousel studio built by <strong>Priyanshu Singh</strong>.
             </p>
             <div className="flex items-center gap-2 text-xs text-emerald-400 font-medium">
               <ShieldCheck className="w-4 h-4" />
-              <span>Production Ready Architecture</span>
+              <span>Engineered by Priyanshu Singh</span>
             </div>
           </div>
 
@@ -134,14 +134,14 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            Built with React, Vite, Tailwind CSS, Node.js, Express & OpenAI.
+            Built by <strong className="text-white">Priyanshu Singh</strong> (<a href="mailto:priyanshusingh22340@gmail.com" className="text-emerald-400 hover:underline">priyanshusingh22340@gmail.com</a>) • React 18, Vite, Tailwind CSS, Node.js & OpenAI.
           </div>
           <div className="flex items-center gap-4">
             <Link to="/" className="hover:text-slate-300">
-              Executive Suite Home
+              Pawzz Platform Home
             </Link>
             <span>•</span>
-            <span className="text-slate-400">Founder Assessment Ready</span>
+            <span className="text-emerald-400 font-semibold">Founder Ready</span>
           </div>
         </div>
       </div>

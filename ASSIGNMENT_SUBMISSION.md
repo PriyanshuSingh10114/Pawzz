@@ -1,7 +1,8 @@
-# NexaStudio — Executive Assignment Submission & Senior Product Review
+# Pawzz — Executive Assignment Submission & Senior Product Review
 
-**Candidate / Role**: Product Development, Design & AI Systems Intern Assessment  
-**Evaluation Scope**: Full-Time Product Engineer Offer Evaluation  
+**Candidate / Developer**: Priyanshu Singh ([priyanshusingh22340@gmail.com](mailto:priyanshusingh22340@gmail.com))  
+**Repository**: `Pawzz` (Animal Healthcare, Practical AI Education & Content Automation Suite)  
+**Evaluation Scope**: Full-Time Product Engineer Offer Evaluation (₹8 LPA)  
 **Date of Audit**: November 2024  
 
 ---
@@ -9,7 +10,7 @@
 ## Part 1: Product Strategy & Engineering Decisions
 
 ### 1. Product Vision
-NexaStudio demonstrates how a modern product engineer translates disparate founder concepts into production-grade digital software. Rather than building generic SaaS clones or static mockups, NexaStudio unites three distinct vertical solutions under a single coherent design language and engineering standard:
+Pawzz demonstrates how a modern product engineer translates disparate founder concepts into production-grade digital software. Rather than building generic SaaS clones or static mockups, Pawzz unites three distinct vertical solutions under a single coherent design language and engineering standard:
 1. **PawNexus**: An animal healthcare network providing verified veterinary and emergency discovery without search friction.
 2. **SkillSpring AI**: A conversion-optimized educational platform designed for practical AI engineering cohorts.
 3. **SlidePilot**: An autonomous social content generation engine giving founders high-leverage content creation capabilities with strict human review.

@@ -1,5 +1,5 @@
-# NexaStudio 🚀
-### Complete Product Development, Design & AI Systems Suite
+# Pawzz 🐾
+### Animal Healthcare Discovery, Practical AI Education & Social Content Automation Suite
 
 [![Integration Tests](https://img.shields.io/badge/integration%20tests-12%20passed-brightgreen.svg)]()
 [![Persistence Tests](https://img.shields.io/badge/persistence%20tests-verified-brightgreen.svg)]()
@@ -12,7 +12,7 @@
 [![OpenAI](https://img.shields.io/badge/OpenAI-gpt--4o--mini-412991.svg)]()
 [![n8n](https://img.shields.io/badge/n8n-Workflow%20Automation-EA4B71.svg)]()
 
-NexaStudio is an interconnected, production-ready digital product suite developed for the **Product Development, Design & AI Systems Intern Assessment**. It unites three distinct vertical solutions under a single coherent design language, resilient full-stack architecture, and deterministic AI/automation workflows:
+Pawzz is an interconnected, production-grade digital platform developed for the **Product Development, Design & AI Systems Assessment**. It unites three distinct vertical solutions under a single coherent design language, resilient full-stack architecture, and deterministic AI/automation workflows:
 
 1. **🐾 PawNexus** — Animal healthcare discovery & 24/7 emergency dispatch platform.
 2. **🎓 SkillSpring AI** — Practical AI education & workflow engineering cohort platform.
@@ -20,25 +20,35 @@ NexaStudio is an interconnected, production-ready digital product suite develope
 
 ---
 
+## 👤 Author & Developer Details
+- **Developer**: Priyanshu Singh
+- **Email**: [priyanshusingh22340@gmail.com](mailto:priyanshusingh22340@gmail.com)
+- **Role**: Full-Stack Product Engineer / AI Systems Developer
+- **Assessment**: Product Development, Design & AI Systems Assessment
+- **Repository**: `Pawzz` (e:\Job Assignment\Pawzz)
+
+---
+
 ## 📋 Table of Contents
-1. [Problem Statement & Product Solutions](#-problem-statement--product-solutions)
-2. [Key Features by Product](#-key-features-by-product)
-3. [System Architecture](#-system-architecture)
-4. [Technology Stack](#-technology-stack)
-5. [Repository Structure](#-repository-structure)
-6. [Prerequisites](#-prerequisites)
-7. [Installation & Setup](#-installation--setup)
+1. [Author & Developer Details](#-author--developer-details)
+2. [Problem Statement & Product Solutions](#-problem-statement--product-solutions)
+3. [Key Features by Product](#-key-features-by-product)
+4. [System Architecture](#-system-architecture)
+5. [Technology Stack](#-technology-stack)
+6. [Repository Structure](#-repository-structure)
+7. [Prerequisites](#-prerequisites)
+8. [Installation & Setup](#-installation--setup)
    - [1. Clone Repository](#1-clone-repository)
    - [2. Environment Configuration](#2-environment-configuration)
    - [3. Backend Setup](#3-backend-setup)
    - [4. Frontend Setup](#4-frontend-setup)
-8. [Automated Test Suite & Verification](#-automated-test-suite--verification)
-9. [API Reference](#-api-reference)
-10. [SlidePilot AI Architecture & JSON Schema](#-slidepilot-ai-architecture--json-schema)
-11. [n8n Automation & Webhook Integration](#-n8n-automation--webhook-integration)
-12. [Governance & Human-in-the-Loop Model](#-governance--human-in-the-loop-model)
-13. [10-Minute Founder Demonstration Script](#-10-minute-founder-demonstration-script)
-14. [Troubleshooting](#-troubleshooting)
+9. [Automated Test Suite & Verification](#-automated-test-suite--verification)
+10. [API Reference](#-api-reference)
+11. [SlidePilot AI Architecture & JSON Schema](#-slidepilot-ai-architecture--json-schema)
+12. [n8n Automation & Webhook Integration](#-n8n-automation--webhook-integration)
+13. [Governance & Human-in-the-Loop Model](#-governance--human-in-the-loop-model)
+14. [10-Minute Founder Demonstration Script](#-10-minute-founder-demonstration-script)
+15. [Troubleshooting](#-troubleshooting)
 
 ---
 
