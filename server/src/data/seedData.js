@@ -1,0 +1,802 @@
+export const initialProviders = [
+  {
+    id: "pawnexus-prov-001",
+    name: "Crown Vet 24/7 Specialty Hospital",
+    category: "Veterinary Hospitals",
+    address: "Plot 14, Dr. E Moses Road, Worli, Mumbai, Maharashtra 400018",
+    city: "Mumbai",
+    distanceKm: 2.4,
+    rating: 4.8,
+    reviewCount: 312,
+    isVerified: true,
+    is24x7: true,
+    phone: "+91 22 4970 8282",
+    emergencyPhone: "+91 91671 22334",
+    email: "worli@crown.vet",
+    website: "https://crown.vet",
+    openingHours: "Open 24 Hours / 7 Days",
+    services: [
+      "Emergency & Trauma ICU",
+      "Orthopedic Surgery",
+      "Digital X-Ray & Ultrasound",
+      "In-House Pathology Lab",
+      "Cardiology",
+      "In-Patient Hospitalization"
+    ],
+    facilities: ["Air Conditioned Recovery", "ICU Isolation Wards", "Blood Bank Access", "Ambulance Bay"],
+    description: "State-of-the-art 24-hour veterinary emergency hospital with multi-specialty surgical wings, round-the-clock intensive care, and board-certified veterinary surgeons.",
+    reviews: [
+      {
+        author: "Pooja Malhotra",
+        rating: 5,
+        date: "2024-10-14",
+        comment: "They saved my Golden Retriever after an acute gastric torsion at 2 AM. The emergency surgical team was on standby in 15 minutes."
+      },
+      {
+        author: "Devang Shah",
+        rating: 5,
+        date: "2024-09-28",
+        comment: "World-class facilities. Clean, transparent with billing and compassionate staff."
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-002",
+    name: "Cessna Lifeline Veterinary Hospital",
+    category: "Veterinary Hospitals",
+    address: "148, HBCS Layout, Domlur 2nd Stage, Bengaluru, Karnataka 560071",
+    city: "Bengaluru",
+    distanceKm: 3.8,
+    rating: 4.7,
+    reviewCount: 428,
+    isVerified: true,
+    is24x7: true,
+    phone: "+91 80 4110 5000",
+    emergencyPhone: "+91 76763 32211",
+    email: "care@cessnalifeline.com",
+    website: "https://cessnalifeline.com",
+    openingHours: "Open 24 Hours",
+    services: [
+      "Veterinary Critical Care",
+      "Endoscopy & Laparoscopy",
+      "CT Scan for Pets",
+      "Ophthalmology",
+      "Dental Scaler & Surgery",
+      "Pharmacy"
+    ],
+    facilities: ["Advanced Imaging Suite", "Dedicated Feline Ward", "Isolation Room", "Pet Ambulance"],
+    description: "Pioneering veterinary institution with Bengaluru's first dedicated pet CT scanner, laparoscopy, and multi-disciplinary critical care.",
+    reviews: [
+      {
+        author: "Arjun Krishnan",
+        rating: 5,
+        date: "2024-11-02",
+        comment: "Dr. Pawan and his team handled our senior cat's renal crisis with unbelievable expertise."
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-003",
+    name: "Happy Paws Wellness & Vaccination Clinic",
+    category: "Veterinary Clinics",
+    address: "Shop 4, Sunrise Avenue, Sector 54, Gurugram, Delhi NCR 122011",
+    city: "Delhi NCR",
+    distanceKm: 1.6,
+    rating: 4.9,
+    reviewCount: 189,
+    isVerified: true,
+    is24x7: false,
+    phone: "+91 124 456 7890",
+    emergencyPhone: "+91 98112 34567",
+    email: "support@happypawsgurugram.com",
+    website: "https://happypawsgurugram.com",
+    openingHours: "Mon-Sat: 9:00 AM - 8:30 PM, Sun: 10:00 AM - 2:00 PM",
+    services: [
+      "Preventive Health Checkups",
+      "Vaccinations & Deworming",
+      "Microchipping",
+      "Nutritional Counseling",
+      "Minor Wound Dressings",
+      "Tick & Flea Management"
+    ],
+    facilities: ["Separate Cat & Dog Waiting Area", "On-site Pharmacy", "Clean Sanitation Standards"],
+    description: "Neighborhood primary care veterinary clinic focused on compassionate preventive wellness, gentle handling, and puppy/kitten developmental care.",
+    reviews: [
+      {
+        author: "Meera Sen",
+        rating: 5,
+        date: "2024-10-20",
+        comment: "Dr. Ananya takes time to explain every vaccine and nutritional advice. Very calm environment for anxious pets."
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-004",
+    name: "PetCare Diagnostics & Pathology Labs",
+    category: "Diagnostics",
+    address: "SCO 22, Near Metro Pillar 114, Kothrud, Pune, Maharashtra 411038",
+    city: "Pune",
+    distanceKm: 4.1,
+    rating: 4.6,
+    reviewCount: 94,
+    isVerified: true,
+    is24x7: false,
+    phone: "+91 20 2544 1122",
+    emergencyPhone: "+91 94220 88776",
+    email: "reports@petcaredx.com",
+    website: "https://petcaredx.com",
+    openingHours: "Mon-Sun: 7:30 AM - 9:00 PM",
+    services: [
+      "Complete Blood Count (CBC)",
+      "Biochemistry & Electrolytes",
+      "Blood Gas Analysis",
+      "Hormonal & Thyroid Profiles",
+      "Pet Digital X-Ray",
+      "Home Blood Sample Collection"
+    ],
+    facilities: ["NABL Aligned Protocol", "Automated Hematology Analyzers", "Temperature Controlled Storage"],
+    description: "Specialized pet pathology and veterinary diagnostic laboratory delivering same-day verified hematology, biochemical, and biopsy reports.",
+    reviews: [
+      {
+        author: "Nikhil Joshi",
+        rating: 5,
+        date: "2024-08-19",
+        comment: "Home sample collection for my ailing dog was punctual and stress-free. Reports came within 4 hours."
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-005",
+    name: "Pawsome Haven Luxury Pet Boarding & Daycare",
+    category: "Pet Boarding",
+    address: "Sy 89, Gunjur - Doddakannelli Road, Varthur Hobli, Bengaluru, Karnataka 560087",
+    city: "Bengaluru",
+    distanceKm: 8.5,
+    rating: 4.9,
+    reviewCount: 245,
+    isVerified: true,
+    is24x7: true,
+    phone: "+91 80 8899 0011",
+    emergencyPhone: "+91 99001 12233",
+    email: "stay@pawsomehaven.in",
+    website: "https://pawsomehaven.in",
+    openingHours: "Check-in: 8 AM - 7 PM, 24/7 On-premise Caretakers",
+    services: [
+      "Climate-Controlled Private Suites",
+      "Fenced 1-Acre Agility Play Park",
+      "Canine Swimming Pool Sessions",
+      "24/7 CCTV Camera Access for Parents",
+      "Nutritious Home-Cooked Pet Meals",
+      "On-Call Vet Support"
+    ],
+    facilities: ["24/7 Security & CCTV", "Splash Pool", "Separate Small-Dog Play Area", "Grooming Salon"],
+    description: "Cage-free boutique pet resort and resort boarding with grass play meadows, splash pools, and real-time live camera streaming for pet parents.",
+    reviews: [
+      {
+        author: "Rohan & Sneha",
+        rating: 5,
+        date: "2024-11-05",
+        comment: "Left our beagle for 10 days during our vacation abroad. We could watch him playing on CCTV every single day!"
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-006",
+    name: "ResQ Wildlife & Community Animal Rescue NGO",
+    category: "Animal NGOs",
+    address: "Bavdhan Khurd, Near Chandani Chowk, Pune, Maharashtra 411021",
+    city: "Pune",
+    distanceKm: 6.2,
+    rating: 4.9,
+    reviewCount: 680,
+    isVerified: true,
+    is24x7: true,
+    phone: "+91 98900 12121",
+    emergencyPhone: "+91 98900 12121",
+    email: "helpline@resqct.org",
+    website: "https://resqct.org",
+    openingHours: "Rescue Helpline: 24/7, Adoption Center: 11 AM - 5 PM",
+    services: [
+      "Stray Animal Trauma Rescue",
+      "Rehabilitation & Medical Sanctuary",
+      "Animal Birth Control (ABC) Surgery",
+      "Community Pet Adoption Drives",
+      "Free Rabies Vaccination Drives",
+      "Cruelty Case Interventions"
+    ],
+    facilities: ["Trauma Center", "Equine & Cattle Care Units", "Quarantine Wards", "Adoption Pavilion"],
+    description: "Registered non-profit animal rescue organisation operating high-volume trauma hospital, wildlife transit care, and free emergency rescue for injured street animals.",
+    reviews: [
+      {
+        author: "Smita Deshpande",
+        rating: 5,
+        date: "2024-10-30",
+        comment: "Reported an injured indie pup hit by a car. ResQ team arrived with their ambulance within 35 minutes and treated him."
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-007",
+    name: "RapidPaw 24/7 Animal Ambulance Service",
+    category: "Animal Ambulance",
+    address: "Andheri West Central Transit Hub, Mumbai, Maharashtra 400053",
+    city: "Mumbai",
+    distanceKm: 3.1,
+    rating: 4.8,
+    reviewCount: 154,
+    isVerified: true,
+    is24x7: true,
+    phone: "+91 98200 44332",
+    emergencyPhone: "+91 98200 44332",
+    email: "dispatch@rapidpawambulance.in",
+    website: "https://rapidpawambulance.in",
+    openingHours: "Open 24 Hours / 365 Days",
+    services: [
+      "Oxygen-Equipped Emergency Transport",
+      "Stretcher for Heavy & Paralyzed Pets",
+      "Trained Paravet Onboard",
+      "Hospital Transfer Across City",
+      "Accident Spot First-Aid Stabilization"
+    ],
+    facilities: ["Medical Grade Oxygen Cylinders", "Rigid Spinal Immobilization Boards", "Disinfected Vehicle Cabin"],
+    description: "Swift emergency veterinary transport vehicles fitted with vital monitors, oxygen lines, and trained veterinary paramedics for transit stabilization.",
+    reviews: [
+      {
+        author: "Karan Oberoi",
+        rating: 5,
+        date: "2024-11-10",
+        comment: "Extremely professional during an oxygen emergency for our bulldog. The paramedic kept him calm and administered oxygen throughout."
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-008",
+    name: "Max Vets Specialized Animal Hospital",
+    category: "Veterinary Hospitals",
+    address: "R-55, Greater Kailash Part 1, New Delhi, Delhi 110048",
+    city: "Delhi NCR",
+    distanceKm: 5.7,
+    rating: 4.7,
+    reviewCount: 512,
+    isVerified: true,
+    is24x7: true,
+    phone: "+91 11 4165 5566",
+    emergencyPhone: "+91 98100 88990",
+    email: "gk1@maxvets.com",
+    website: "https://maxvets.com",
+    openingHours: "Open 24 Hours",
+    services: [
+      "Oncology & Chemotherapy",
+      "Veterinary Dentistry",
+      "Digital Radiography",
+      "ICU Support Unit",
+      "Dermatology & Allergy Clinics",
+      "Exotic Pet Care (Birds & Small Mammals)"
+    ],
+    facilities: ["Advanced Surgery Theaters", "Separate Exotic Ward", "In-house Ultrasound"],
+    description: "Delhi NCR's trusted multi-specialty institution known for cancer therapeutics, laparoscopic interventions, and compassionate geriatric pet care.",
+    reviews: [
+      {
+        author: "Simran Kaur",
+        rating: 5,
+        date: "2024-09-12",
+        comment: "Dr. Kunal and staff treated our Persian cat with gentle precision. Best veterinary infrastructure in South Delhi."
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-009",
+    name: "Friendicoes SECA Shelter & Veterinary Hospital",
+    category: "Animal NGOs",
+    address: "271 & 273, Flyover Market, Defence Colony, New Delhi, Delhi 110024",
+    city: "Delhi NCR",
+    distanceKm: 4.9,
+    rating: 4.8,
+    reviewCount: 920,
+    isVerified: true,
+    is24x7: true,
+    phone: "+91 11 2432 0707",
+    emergencyPhone: "+91 11 2432 0303",
+    email: "friendicoes.india@gmail.com",
+    website: "https://friendicoes.org",
+    openingHours: "OPD: 9:30 AM - 8:30 PM, Emergency: 24 Hours",
+    services: [
+      "Affordable OPD Treatment",
+      "Free Street Dog Sterilization (ABC)",
+      "Shelter Sanctuary for Abandoned Pets",
+      "Equine Mobile Hospital",
+      "Indie Adoption Counseling"
+    ],
+    facilities: ["Shelter Sanctuary", "Spay/Neuter Wing", "Emergency Ambulances"],
+    description: "Iconic animal welfare NGO serving street and domestic animals since 1979 with round-the-clock subsidized veterinary care and rescue shelters.",
+    reviews: [
+      {
+        author: "Gaurav Talwar",
+        rating: 5,
+        date: "2024-10-18",
+        comment: "The doctors work tirelessly here. True lifesavers for stray dogs and low-income pet owners."
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-010",
+    name: "Bark & Purr Holistic Feline & Canine Clinic",
+    category: "Veterinary Clinics",
+    address: "Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033",
+    city: "Hyderabad",
+    distanceKm: 3.4,
+    rating: 4.9,
+    reviewCount: 175,
+    isVerified: true,
+    is24x7: false,
+    phone: "+91 40 2355 6789",
+    emergencyPhone: "+91 97000 11223",
+    email: "care@barkandpurrhvd.com",
+    website: "https://barkandpurrhvd.com",
+    openingHours: "Mon-Sat: 10:00 AM - 7:30 PM",
+    services: [
+      "Veterinary Acupuncture & Laser Therapy",
+      "Comprehensive Wellness Exams",
+      "Pet Microchipping & Passports",
+      "Senior Pet Mobility Therapy",
+      "Dental Descaling & Polishing"
+    ],
+    facilities: ["Fear-Free Certified Clinic", "Feline Friendly Waiting Lounge", "Laser Rehabilitation Bay"],
+    description: "Hyderabad's certified Fear-Free clinic incorporating integrative medicine, acupuncture, laser therapy, and anxiety-free handling.",
+    reviews: [
+      {
+        author: "Vikram Reddy",
+        rating: 5,
+        date: "2024-10-02",
+        comment: "Laser therapy did wonders for my 12-year-old Labrador's hip dysplasia. He walks without limping now!"
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-011",
+    name: "PetVenture Farm Boarding & Retreat",
+    category: "Pet Boarding",
+    address: "Greenwood Valley, Mulshi Road, Pune Outskirts, Maharashtra 412108",
+    city: "Pune",
+    distanceKm: 14.2,
+    rating: 4.9,
+    reviewCount: 130,
+    isVerified: true,
+    is24x7: true,
+    phone: "+91 98231 99887",
+    emergencyPhone: "+91 98231 99887",
+    email: "hello@petventurefarm.com",
+    website: "https://petventurefarm.com",
+    openingHours: "Farm Visit by Appointment: 9 AM - 6 PM",
+    services: [
+      "Farm-Style Natural Boarding",
+      "Swimming Lagoon for Dogs",
+      "Daily Forest Treks & Sniffari",
+      "Raw & Fresh Organic Meals",
+      "Professional Agility Training"
+    ],
+    facilities: ["3 Acres Fenced Countryside", "Natural Water Lagoon", "Resident Dog Behaviorist"],
+    description: "An idyllic country retreat where dogs run free across 3 acres of organic farmland, swim in natural pools, and socialize under trainer supervision.",
+    reviews: [
+      {
+        author: "Ananya Dixit",
+        rating: 5,
+        date: "2024-09-15",
+        comment: "Our hyperactive Husky came back relaxed, well-exercised, and exhausted from all the fun swimming and running."
+      }
+    ]
+  },
+  {
+    id: "pawnexus-prov-012",
+    name: "Blue Cross Animal Care & Diagnostics",
+    category: "Diagnostics",
+    address: "12, Inner Ring Road, Domlur, Bengaluru, Karnataka 560071",
+    city: "Bengaluru",
+    distanceKm: 3.2,
+    rating: 4.7,
+    reviewCount: 160,
+    isVerified: true,
+    is24x7: false,
+    phone: "+91 80 2535 0101",
+    emergencyPhone: "+91 98450 77665",
+    email: "lab@bluecrossdiagnostics.org",
+    website: "https://bluecrossdiagnostics.org",
+    openingHours: "Mon-Sat: 8:00 AM - 8:00 PM, Sun: 9:00 AM - 1:00 PM",
+    services: [
+      "Veterinary Microbiology & Culture",
+      "Allergy Panel Testing",
+      "Cytology & Histopathology",
+      "High Resolution Ultrasonography",
+      "Infectious Disease PCR Kits"
+    ],
+    facilities: ["Advanced Microscopic Imaging", "Molecular PCR Unit", "Sterile Biopsy Suite"],
+    description: "Specialized pathology center providing precision infectious disease PCR screenings, fungal cultures, and rapid microscopic cytology for veterinary clinics.",
+    reviews: [
+      {
+        author: "Karthik Swaminathan",
+        rating: 5,
+        date: "2024-11-01",
+        comment: "Extremely accurate PCR panel results that helped pinpoint my puppy's viral condition in time."
+      }
+    ]
+  }
+];
+
+export const initialProgrammes = [
+  {
+    id: "prog-001",
+    slug: "generative-ai-fundamentals",
+    title: "Generative AI Fundamentals & Practical Prompting",
+    tagline: "Master foundation models, prompt engineering patterns, and multimodal tools.",
+    category: "Foundation",
+    duration: "6 Weeks",
+    level: "Beginner to Intermediate",
+    cohortStart: "December 2, 2024",
+    seatsLeft: 8,
+    rating: 4.9,
+    enrolledCount: 1240,
+    highlights: [
+      "Zero prior coding required",
+      "Hands-on with GPT-4o, Claude 3.5 Sonnet, Midjourney & Whisper",
+      "4 Real-world capstone projects",
+      "Lifetime prompt library access"
+    ],
+    learningOutcomes: [
+      "Formulate robust few-shot and chain-of-thought prompt templates",
+      "Automate document analysis, synthesis, and structured JSON extraction",
+      "Combine vision and audio models into creative production pipelines",
+      "Implement AI safety guardrails and evaluation criteria"
+    ],
+    modules: [
+      {
+        week: "Week 1",
+        title: "Demystifying Modern LLMs & Tokenization",
+        topics: ["Transformer architecture intuitions", "Context windows & token mechanics", "System prompts vs user prompts"]
+      },
+      {
+        week: "Week 2",
+        title: "Advanced Prompt Engineering Frameworks",
+        topics: ["Directional stimulus prompting", "ReAct and decomposition patterns", "Few-shot calibration and structured outputs"]
+      },
+      {
+        week: "Week 3",
+        title: "Multimodal Generation: Vision, Audio & Canvas",
+        topics: ["Image prompt crafting & parameter tuning", "Speech-to-text with Whisper", "Document vision analysis"]
+      },
+      {
+        week: "Week 4-5",
+        title: "Real-World Business Workflow Integration",
+        topics: ["Customer research automation", "Marketing copy matrix generation", "Synthesizing PDF financial statements"]
+      },
+      {
+        week: "Week 6",
+        title: "Capstone Showcase & Portfolio Review",
+        topics: ["End-to-end prompt system evaluation", "Peer critique and industry mentor review"]
+      }
+    ]
+  },
+  {
+    id: "prog-002",
+    slug: "ai-automation-workflow-engineering",
+    title: "AI Automation & Workflow Engineering (n8n & Autonomous Agents)",
+    tagline: "Build production-grade automated agent workflows with n8n, webhooks and LLM nodes.",
+    category: "Automation",
+    duration: "8 Weeks",
+    level: "Intermediate",
+    cohortStart: "December 9, 2024",
+    seatsLeft: 5,
+    rating: 4.95,
+    enrolledCount: 890,
+    highlights: [
+      "Master n8n workflow creation from scratch",
+      "Trigger automations via webhooks and event listeners",
+      "Integrate vector memory and external tool calling",
+      "Human-in-the-loop approval workflows"
+    ],
+    learningOutcomes: [
+      "Deploy self-hosted or cloud n8n instances connected to AI nodes",
+      "Build webhook pipelines that ingest unstructured input and yield actionable results",
+      "Implement multi-agent loops with automated retry logic and exception handling",
+      "Connect CRMs, Slack, Google Workspace, and relational databases into AI pipes"
+    ],
+    modules: [
+      {
+        week: "Week 1-2",
+        title: "Automation Architecture & n8n Core Concepts",
+        topics: ["Nodes, triggers, execution flows", "Data mapping & JSON transformations", "Webhook listener endpoints"]
+      },
+      {
+        week: "Week 3-4",
+        title: "LLM Node Integration & Agent Tool Calling",
+        topics: ["OpenAI & Anthropic nodes in n8n", "Structured JSON output enforcement", "Conditional router branching"]
+      },
+      {
+        week: "Week 5-6",
+        title: "Stateful Workflows & Human Approval Gates",
+        topics: ["Pause and resume nodes", "Slack/Email approval triggers", "Database state logging and error rollbacks"]
+      },
+      {
+        week: "Week 7-8",
+        title: "Enterprise Project: Autonomous Content & Lead Engine",
+        topics: ["Multi-step ingestion pipeline", "Quality assurance scoring", "Automated deployment & monitoring"]
+      }
+    ]
+  },
+  {
+    id: "prog-003",
+    slug: "ai-for-product-managers-business",
+    title: "AI for Product Managers & Business Leaders",
+    tagline: "Strategize, scope, design, and ship high-ROI AI features with confidence.",
+    category: "Leadership",
+    duration: "6 Weeks",
+    level: "All Levels",
+    cohortStart: "January 6, 2025",
+    seatsLeft: 12,
+    rating: 4.88,
+    enrolledCount: 1040,
+    highlights: [
+      "AI PRD (Product Requirement Document) frameworks",
+      "Cost, latency & token economics modeling",
+      "UX patterns for probabilistic systems",
+      "Executive pitch deck teardowns"
+    ],
+    learningOutcomes: [
+      "Assess whether a problem genuinely requires an LLM or traditional heuristic",
+      "Calculate token inference costs and latency budgets before writing code",
+      "Design intuitive UI patterns for AI uncertainty, fallback, and user corrections",
+      "Run evaluation benchmarks to prevent hallucination in production"
+    ],
+    modules: [
+      {
+        week: "Week 1-2",
+        title: "AI Product Strategy & Opportunity Sizing",
+        topics: ["The AI Value Chain", "Build vs Buy vs Fine-tune decision matrix", "Token unit economics"]
+      },
+      {
+        week: "Week 3-4",
+        title: "UX Patterns for Non-Deterministic Software",
+        topics: ["Streaming UI states", "Confidence intervals & graceful degradation", "Human-in-the-loop UX"]
+      },
+      {
+        week: "Week 5-6",
+        title: "Evals, Red-Teaming & Launch Readiness",
+        topics: ["Building Golden Datasets", "Synthetic data testing", "Compliance, copyright & privacy governance"]
+      }
+    ]
+  },
+  {
+    id: "prog-004",
+    slug: "fullstack-ai-engineering",
+    title: "Full-Stack AI Application Development",
+    tagline: "Build reactive web apps powered by LangChain, Vercel AI SDK, and Vector DBs.",
+    category: "Engineering",
+    duration: "10 Weeks",
+    level: "Advanced (JS/React knowledge required)",
+    cohortStart: "January 13, 2025",
+    seatsLeft: 6,
+    rating: 4.96,
+    enrolledCount: 740,
+    highlights: [
+      "React + Node.js + Pinecone/Qdrant + OpenAI stack",
+      "Build production RAG (Retrieval-Augmented Generation)",
+      "Streaming responses with Server-Sent Events (SSE)",
+      "Deploy scalable serverless microservices"
+    ],
+    learningOutcomes: [
+      "Architect end-to-end full-stack applications with streaming AI capabilities",
+      "Implement document chunking, embeddings generation, and hybrid semantic search",
+      "Manage session context, conversation history, and user authentication",
+      "Deploy robust production applications on Vercel and modern cloud providers"
+    ],
+    modules: [
+      {
+        week: "Week 1-2",
+        title: "Modern React AI Architectures",
+        topics: ["Streaming UI with useChat & Vercel AI SDK", "Markdown & LaTeX rendering", "Optimistic state updates"]
+      },
+      {
+        week: "Week 3-5",
+        title: "Production RAG & Vector Embeddings",
+        topics: ["Chunking strategies (semantic, recursive)", "Vector DB indexing (Pinecone/Qdrant)", "Reranking & hybrid search"]
+      },
+      {
+        week: "Week 6-8",
+        title: "Agent Systems & External Function Calling",
+        topics: ["OpenAI Tools API", "Multi-step tool planning", "Observability with LangSmith & Arize"]
+      },
+      {
+        week: "Week 9-10",
+        title: "Final Capstone: Commercial SaaS Build",
+        topics: ["Subscription billing with Stripe", "Multi-tenant tenant security", "Production deployment & launch"]
+      }
+    ]
+  }
+];
+
+export const initialProjects = [
+  {
+    id: "proj-101",
+    title: "7 AI Tools That Save 20+ Hours a Week for Founders",
+    topic: "7 AI tools that automate mundane founder tasks: scheduling, content writing, lead research, meeting transcripts, slide design, email replies, and code generation.",
+    targetAudience: "Startup Founders, Solo Entrepreneurs & Agency Owners",
+    platform: "LinkedIn",
+    contentObjective: "Thought Leadership & Inbound Leads",
+    tone: "Actionable & Crisp",
+    template: "minimal-editorial",
+    slideCount: 8,
+    status: "Approved",
+    createdAt: "2024-11-15T10:30:00Z",
+    updatedAt: "2024-11-16T14:20:00Z",
+    slides: [
+      {
+        slideNumber: 1,
+        headline: "7 AI Tools That Save 20+ Hours a Week",
+        description: "Stop spending 60% of your founder hours on administrative tasks. Here is the exact stack top tech founders are using to operate as a 10-person team.",
+        visualType: "Hero Cover",
+        tag: "Founder Productivity",
+        cta: "Swipe to inspect the stack ->"
+      },
+      {
+        slideNumber: 2,
+        headline: "1. Granola — Intelligent Meeting Synthesis",
+        description: "Standard transcripts are boring. Granola takes your raw spoken notes and drafts customer PRDs, follow-up emails, and investor summaries in seconds.",
+        visualType: "Tool Highlight",
+        tag: "Meeting Productivity",
+        cta: "Save 3 hrs/week"
+      },
+      {
+        slideNumber: 3,
+        headline: "2. Claude 3.5 Sonnet — Strategy & Code",
+        description: "Use Artifacts to prototype interactive mini-tools, analyze complex financial spreadsheets, and draft high-converting landing page copy.",
+        visualType: "Tool Highlight",
+        tag: "Strategy & Prototyping",
+        cta: "Save 5 hrs/week"
+      },
+      {
+        slideNumber: 4,
+        headline: "3. SlidePilot — Auto Carousel & Pitch Decks",
+        description: "Turn raw thoughts into high-engagement LinkedIn and Instagram carousels with strict JSON layout guarantees and 1-click PDF export.",
+        visualType: "Tool Highlight",
+        tag: "Social Thought Leadership",
+        cta: "Save 4 hrs/week"
+      },
+      {
+        slideNumber: 5,
+        headline: "4. Clay.com — AI Lead Enrichment",
+        description: "Scrape, verify, and personalize cold outbound emails with 50+ data sources without hiring an expensive SDR team.",
+        visualType: "Tool Highlight",
+        tag: "Sales & Outbound",
+        cta: "Save 4 hrs/week"
+      },
+      {
+        slideNumber: 6,
+        headline: "5. Perplexity Pro — Fact-Checked Market Research",
+        description: "Replace hours of generic Google browsing with cited, real-time academic and industry intelligence.",
+        visualType: "Tool Highlight",
+        tag: "Market Intelligence",
+        cta: "Save 3 hrs/week"
+      },
+      {
+        slideNumber: 7,
+        headline: "The Golden Rule of AI Delegation",
+        description: "Never delegate thinking — delegate execution. Use AI to create the first draft and refine the structure, but keep founder judgment at the center.",
+        visualType: "Framework",
+        tag: "Mental Model",
+        cta: "Remember this"
+      },
+      {
+        slideNumber: 8,
+        headline: "Which tool are you adding to your daily workflow?",
+        description: "Drop a comment with your favorite AI tool. Repost this carousel if it helped you reclaim valuable founder hours.",
+        visualType: "Call To Action",
+        tag: "Engage & Share",
+        cta: "Follow for daily AI founder systems"
+      }
+    ]
+  },
+  {
+    id: "proj-102",
+    title: "Veterinary Emergency Checklist: 5 Signs Never to Ignore",
+    topic: "Crucial emergency symptoms in dogs and cats that require immediate hospital care within 60 minutes.",
+    targetAudience: "Pet Parents, Dog and Cat Owners",
+    platform: "Instagram",
+    contentObjective: "Public Awareness & Community Education",
+    tone: "Empathetic & Urgent",
+    template: "modern-gradient",
+    slideCount: 6,
+    status: "Draft",
+    createdAt: "2024-11-16T09:15:00Z",
+    updatedAt: "2024-11-16T11:00:00Z",
+    slides: [
+      {
+        slideNumber: 1,
+        headline: "5 Signs Your Pet Needs an Emergency Hospital Now",
+        description: "When it comes to animal healthcare, minutes matter. Here are 5 critical symptoms that can never wait until tomorrow morning.",
+        visualType: "Alert Hero",
+        tag: "Pet Health Guide",
+        cta: "Swipe to learn the warning signs ->"
+      },
+      {
+        slideNumber: 2,
+        headline: "1. Rapid, Shallow Breathing or Panting at Rest",
+        description: "If your pet is panting without heat exposure or has gums turning pale or bluish, this signals acute respiratory distress or cardiac emergency.",
+        visualType: "Symptom 1",
+        tag: "Respiratory Danger",
+        cta: "Rush to 24/7 ICU"
+      },
+      {
+        slideNumber: 3,
+        headline: "2. Unproductive Retching & Swollen Abdomen",
+        description: "Especially in large-breed dogs, trying to vomit without bringing up food can indicate Gastric Dilatation-Volvulus (GDV). It requires immediate surgical intervention.",
+        visualType: "Symptom 2",
+        tag: "Gastric Emergency",
+        cta: "Immediate Surgery Required"
+      },
+      {
+        slideNumber: 4,
+        headline: "3. Inability to Urinate (Especially Male Cats)",
+        description: "Straining in the litter box without producing urine is a lethal urinary obstruction. Toxin buildup can cause heart failure within 24 hours.",
+        visualType: "Symptom 3",
+        tag: "Urinary Blockage",
+        cta: "Fatal if delayed"
+      },
+      {
+        slideNumber: 5,
+        headline: "4. Sudden Collapse or Inability to Stand",
+        description: "Sudden paralysis in hind legs or collapsing indicates severe internal bleeding, neurological trauma, or acute heart disease.",
+        visualType: "Symptom 4",
+        tag: "Neurological Alert",
+        cta: "Immobilize & Transport"
+      },
+      {
+        slideNumber: 6,
+        headline: "Save PawNexus Emergency Numbers to Your Phone",
+        description: "Do not wait for an emergency to find out where your nearest 24/7 veterinary hospital is located. Bookmark PawNexus and locate 24-hour trauma care in advance.",
+        visualType: "Closing CTA",
+        tag: "Be Prepared",
+        cta: "Share this with fellow pet parents"
+      }
+    ]
+  }
+];
+
+export const initialWorkflowLogs = [
+  {
+    id: "wf-log-001",
+    timestamp: "2024-11-16T14:18:22Z",
+    source: "Native AI Engine",
+    trigger: "SlidePilot Project Wizard",
+    topic: "7 AI Tools That Save 20+ Hours a Week",
+    status: "Completed",
+    tokensUsed: 1420,
+    latencyMs: 1840,
+    outputProjectId: "proj-101",
+    humanApprovalStatus: "Approved",
+    steps: [
+      { step: "Validation", status: "Passed", durationMs: 45 },
+      { step: "Prompt Composition", status: "Completed", durationMs: 25 },
+      { step: "LLM Structured JSON Generation", status: "Completed", durationMs: 1520 },
+      { step: "Schema Validation & Formatting", status: "Passed", durationMs: 60 },
+      { step: "Slide Layout Matrix Generation", status: "Completed", durationMs: 190 }
+    ]
+  },
+  {
+    id: "wf-log-002",
+    timestamp: "2024-11-16T16:45:10Z",
+    source: "n8n Webhook Listener",
+    trigger: "External Webhook (/api/automation/slidepilot/webhook)",
+    topic: "Product Led Growth in 2025",
+    status: "Ready for Human Review",
+    tokensUsed: 1280,
+    latencyMs: 2150,
+    outputProjectId: "proj-102",
+    humanApprovalStatus: "In Review",
+    steps: [
+      { step: "Webhook Ingestion & Secret Verification", status: "Passed", durationMs: 30 },
+      { step: "Payload Validation", status: "Passed", durationMs: 15 },
+      { step: "n8n Trigger Workflow Dispatch", status: "Dispatched", durationMs: 240 },
+      { step: "AI Content Generation", status: "Completed", durationMs: 1800 },
+      { step: "Save Draft Project", status: "Saved", durationMs: 65 }
+    ]
+  }
+];

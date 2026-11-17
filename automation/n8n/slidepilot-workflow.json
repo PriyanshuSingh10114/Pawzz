@@ -1,0 +1,131 @@
+{
+  "name": "SlidePilot - Automated Carousel Generation & Human Review",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "slidepilot-idea-trigger",
+        "options": {}
+      },
+      "id": "node-webhook-trigger",
+      "name": "Webhook Trigger (Idea Intake)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "slidepilot-idea-intake"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.topic }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "node-validate-payload",
+      "name": "Validate Topic & Schema",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=Generate a viral LinkedIn/Instagram carousel on: {{ $json.body.topic }}. Target audience: {{ $json.body.targetAudience || 'Founders' }}. Return JSON with contentTitle, mainHook, slides (array of headline, description, visualType, tag, cta), caption, hashtags.",
+              "role": "user"
+            }
+          ]
+        },
+        "options": {
+          "responseFormat": "json_object"
+        }
+      },
+      "id": "node-openai-llm",
+      "name": "OpenAI - Structured Carousel Generation",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1,
+      "position": [700, 240]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:5000/api/automation/slidepilot/webhook",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"topic\": \"{{ $('Webhook Trigger (Idea Intake)').item.json.body.topic }}\",\n  \"targetAudience\": \"{{ $('Webhook Trigger (Idea Intake)').item.json.body.targetAudience || 'Founders' }}\",\n  \"platform\": \"{{ $('Webhook Trigger (Idea Intake)').item.json.body.platform || 'LinkedIn' }}\",\n  \"tone\": \"Tactical & Punchy\",\n  \"slideCount\": 6,\n  \"triggerSource\": \"n8n Autonomous Pipeline\",\n  \"aiGeneratedContent\": {{ $json.message.content }}\n}",
+        "options": {}
+      },
+      "id": "node-http-post-slidepilot",
+      "name": "Send Draft to SlidePilot for Human Approval",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [960, 240]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"queued_for_approval\",\n  \"message\": \"Carousel created as draft in SlidePilot. Founder human approval required before publishing.\",\n  \"receivedTopic\": \"{{ $('Webhook Trigger (Idea Intake)').item.json.body.topic }}\"\n}"
+      },
+      "id": "node-webhook-respond",
+      "name": "Return Webhook Confirmation",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1200, 240]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger (Idea Intake)": {
+      "main": [
+        [
+          {
+            "node": "Validate Topic & Schema",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate Topic & Schema": {
+      "main": [
+        [
+          {
+            "node": "OpenAI - Structured Carousel Generation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI - Structured Carousel Generation": {
+      "main": [
+        [
+          {
+            "node": "Send Draft to SlidePilot for Human Approval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Draft to SlidePilot for Human Approval": {
+      "main": [
+        [
+          {
+            "node": "Return Webhook Confirmation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
