@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { NotificationProvider } from './context/NotificationContext';
 import NotificationToast from './components/common/NotificationToast';
-import DemoModeBanner from './components/common/DemoModeBanner';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 
@@ -17,10 +16,7 @@ export default function App() {
   return (
     <NotificationProvider>
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen bg-slate-50 text-slate-900 font-sans antialiased">
-          {/* Top Demo Banner */}
-          <DemoModeBanner />
-
+        <div className="flex flex-col min-h-screen bg-slate-50 text-slate-900 font-sans antialiased selection:bg-emerald-600 selection:text-white">
           {/* Unified Global Navbar with Product Switcher */}
           <Navbar />
 

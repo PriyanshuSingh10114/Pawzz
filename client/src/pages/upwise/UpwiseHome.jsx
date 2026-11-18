@@ -25,6 +25,13 @@ import {
 import { SkillSpringService } from '../../services/api';
 import { useNotification } from '../../context/NotificationContext';
 
+const PROGRAMME_IMAGES = {
+  'Generative AI Fundamentals & Practical Prompting': 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=700&q=80',
+  'AI Automation and Workflow Design': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80',
+  'AI for Product Management & Innovation': 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=700&q=80',
+  'Full-Stack Digital Product Development': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80',
+};
+
 export default function UpwiseHome() {
   const { addNotification } = useNotification();
   const [programmes, setProgrammes] = useState([]);
@@ -168,7 +175,7 @@ export default function UpwiseHome() {
   return (
     <div className="min-h-screen bg-[#faf8f5] text-slate-900 font-sans selection:bg-amber-500 selection:text-slate-950">
       {/* Top Banner Navigation Header */}
-      <div className="bg-[#111927] text-slate-200 border-b border-slate-800 sticky top-16 z-30 shadow-xs">
+      <div className="bg-[#0b1120] text-slate-200 border-b border-slate-800 sticky top-16 z-30 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between text-xs">
           <div className="flex items-center gap-6">
             <span className="font-bold text-amber-400 flex items-center gap-1.5">
@@ -204,73 +211,113 @@ export default function UpwiseHome() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#111927] via-[#1a2333] to-[#111927] text-white pt-16 pb-24 border-b border-slate-800">
+      {/* Hero Section: Two Column Editorial Modern Layout */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#0b1120] via-[#10192e] to-[#0b1120] text-white pt-16 pb-24 border-b border-slate-800">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold border border-amber-500/25">
-              <Sparkles className="w-4 h-4 text-amber-400" />
-              <span>Practical AI & Digital Skills for the Intelligence Era</span>
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Hero Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold border border-amber-500/25">
+                <Sparkles className="w-4 h-4 text-amber-400" />
+                <span>Practical AI & Digital Skills for the Modern Workforce</span>
+              </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
-              Learn Skills That Move Your <span className="text-amber-400 underline decoration-amber-500 decoration-wavy decoration-2">Career Forward</span>.
-            </h1>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
+                Learn Skills That Move Your <span className="text-amber-400 underline decoration-amber-500 decoration-wavy decoration-2">Career Forward</span>.
+              </h1>
 
-            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Hands-on, project-driven engineering cohorts for students and young professionals. Build real production AI agents, autonomous workflows, and modern web applications with direct mentor feedback.
-            </p>
+              <p className="text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed">
+                Hands-on, project-driven engineering cohorts for students and young professionals. Build real production AI agents, autonomous workflows, and full-stack web applications with direct mentor feedback.
+              </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <a
-                href="#programmes"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2"
-              >
-                <span>Explore Programmes</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <a
+                  href="#programmes"
+                  className="px-8 py-4 rounded-2xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm shadow-xl shadow-amber-500/20 transition-all flex items-center justify-center gap-2"
+                >
+                  <span>Explore Programmes</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
 
-              <a
-                href="#admissions-enquiry"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-white font-bold text-sm border border-slate-700 transition-colors flex items-center justify-center gap-2"
-              >
-                <span>Talk to an Admissions Advisor</span>
-              </a>
-            </div>
+                <a
+                  href="#admissions-enquiry"
+                  className="px-8 py-4 rounded-2xl bg-slate-800/80 hover:bg-slate-700 text-white font-bold text-sm border border-slate-700 transition-colors flex items-center justify-center gap-2"
+                >
+                  <span>Talk to an Advisor</span>
+                </a>
+              </div>
 
-            {/* Credibility Strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-slate-800/80 max-w-4xl mx-auto text-left">
-              <div>
-                <div className="flex items-center gap-1 text-amber-400 text-lg font-extrabold">
-                  <Star className="w-4 h-4 fill-amber-400" />
-                  <span>4.9 / 5.0</span>
+              {/* Credibility Metrics */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-800/80">
+                <div>
+                  <div className="flex items-center gap-1 text-amber-400 font-extrabold text-base">
+                    <Star className="w-4 h-4 fill-amber-400" />
+                    <span>4.9 / 5.0</span>
+                  </div>
+                  <div className="text-[11px] text-slate-400 mt-0.5">Learner Satisfaction</div>
                 </div>
-                <div className="text-xs text-slate-400 mt-0.5">Learner Satisfaction Rating</div>
-              </div>
 
-              <div>
-                <div className="text-lg font-extrabold text-white">2,400+</div>
-                <div className="text-xs text-slate-400 mt-0.5">Engineers & Builders Trained</div>
-              </div>
+                <div>
+                  <div className="text-base font-extrabold text-white">2,400+</div>
+                  <div className="text-[11px] text-slate-400 mt-0.5">Builders Trained</div>
+                </div>
 
-              <div>
-                <div className="text-lg font-extrabold text-white">100% Practical</div>
-                <div className="text-xs text-slate-400 mt-0.5">Capstone Projects, No Slides</div>
-              </div>
+                <div>
+                  <div className="text-base font-extrabold text-white">100% Practical</div>
+                  <div className="text-[11px] text-slate-400 mt-0.5">Capstone Defenses</div>
+                </div>
 
-              <div>
-                <div className="text-lg font-extrabold text-white">1:1 Mentorship</div>
-                <div className="text-xs text-slate-400 mt-0.5">Weekly Senior Code Reviews</div>
+                <div>
+                  <div className="text-base font-extrabold text-white">1:1 Mentorship</div>
+                  <div className="text-[11px] text-slate-400 mt-0.5">Weekly Code Reviews</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Hero Image Card */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-4 border-slate-800">
+                <img
+                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80"
+                  alt="Modern tech workspace and developer cohort"
+                  className="w-full h-[460px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+
+                {/* Floating Capstone Badge */}
+                <div className="absolute top-4 left-4 p-3 bg-slate-900/90 backdrop-blur-md rounded-2xl border border-slate-700 text-xs flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                    <Award className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-bold text-slate-400 uppercase">Outcome</div>
+                    <div className="font-extrabold text-white">Verified Production Capstone</div>
+                  </div>
+                </div>
+
+                {/* Bottom Overlay Card */}
+                <div className="absolute bottom-4 left-4 right-4 p-4 bg-slate-900/90 backdrop-blur-md rounded-2xl border border-slate-700 flex items-center justify-between">
+                  <div>
+                    <div className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Next Live Cohort</div>
+                    <div className="text-xs font-bold text-white mt-0.5">Starting November 25, 2026</div>
+                  </div>
+                  <a
+                    href="#admissions-enquiry"
+                    className="px-3 py-1.5 rounded-xl bg-amber-500 text-slate-950 font-extrabold text-xs hover:bg-amber-400 transition-colors"
+                  >
+                    Apply Now
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Flagship Programmes Section */}
+      {/* Flagship Programmes Section with Photography */}
       <section id="programmes" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl mb-12">
           <div className="text-xs font-bold text-amber-600 uppercase tracking-wider">Curated Cohorts</div>
@@ -294,106 +341,119 @@ export default function UpwiseHome() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {programmes.map((p) => (
-              <div
-                key={p._id || p.id || p.slug}
-                className="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden"
-              >
-                <div className="p-8 space-y-5">
-                  {/* Top Badges */}
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-800">
-                      {p.category}
-                    </span>
-                    <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-amber-50 text-amber-800 border border-amber-200">
-                      {p.seatsLeft || 8} Seats Left
-                    </span>
-                  </div>
-
-                  {/* Title & Tagline */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
-                      {p.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-                      {p.tagline}
-                    </p>
-                  </div>
-
-                  {/* Metadata Chips */}
-                  <div className="grid grid-cols-3 gap-2 p-3 bg-[#fbf9f5] rounded-2xl border border-stone-200 text-xs">
-                    <div>
-                      <div className="text-[10px] text-slate-400 font-bold uppercase">Duration</div>
-                      <div className="font-extrabold text-slate-900 mt-0.5">{p.duration}</div>
+            {programmes.map((p) => {
+              const coverImg = PROGRAMME_IMAGES[p.title] || PROGRAMME_IMAGES['Generative AI Fundamentals & Practical Prompting'];
+              return (
+                <div
+                  key={p._id || p.id || p.slug}
+                  className="bg-white rounded-3xl border border-slate-200/90 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all flex flex-col justify-between overflow-hidden"
+                >
+                  {/* Photo Header */}
+                  <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                    <img
+                      src={coverImg}
+                      alt={p.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+                      <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-white/95 text-slate-900 backdrop-blur-md shadow-xs">
+                        {p.category}
+                      </span>
+                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-500 text-slate-950 shadow-xs">
+                        {p.seatsLeft || 8} Seats Open
+                      </span>
                     </div>
-                    <div>
-                      <div className="text-[10px] text-slate-400 font-bold uppercase">Tuition</div>
-                      <div className="font-extrabold text-amber-700 mt-0.5">{p.fee || '₹19,999'}</div>
-                    </div>
-                    <div>
-                      <div className="text-[10px] text-slate-400 font-bold uppercase">Next Cohort</div>
-                      <div className="font-extrabold text-slate-900 mt-0.5">{p.cohortStart}</div>
+                    <div className="absolute bottom-3 left-4 right-4 text-white">
+                      <h3 className="text-xl font-bold leading-snug drop-shadow-xs">
+                        {p.title}
+                      </h3>
                     </div>
                   </div>
 
-                  {/* Tools Taught Chips */}
-                  <div className="space-y-1.5">
-                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                      Tools & Frameworks
-                    </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {(p.toolsTaught || ['OpenAI API', 'n8n', 'Python', 'Cursor', 'Docker']).map((tool) => (
-                        <span
-                          key={tool}
-                          className="px-2.5 py-0.5 bg-slate-100 text-slate-700 rounded-md text-[11px] font-mono font-medium"
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                  <div className="p-8 space-y-5 flex-1 flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        {p.tagline}
+                      </p>
 
-                  {/* Capstone Project Highlight */}
-                  <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 space-y-1.5">
-                    <div className="text-[10px] font-bold text-amber-800 uppercase tracking-wider flex items-center gap-1">
-                      <Briefcase className="w-3.5 h-3.5 text-amber-700" />
-                      <span>Verified Capstone Project</span>
+                      {/* Metadata Chips */}
+                      <div className="grid grid-cols-3 gap-2 p-3 bg-[#fbf9f5] rounded-2xl border border-stone-200 text-xs">
+                        <div>
+                          <div className="text-[10px] text-slate-400 font-bold uppercase">Duration</div>
+                          <div className="font-extrabold text-slate-900 mt-0.5">{p.duration}</div>
+                        </div>
+                        <div>
+                          <div className="text-[10px] text-slate-400 font-bold uppercase">Tuition</div>
+                          <div className="font-extrabold text-amber-700 mt-0.5">{p.fee || '₹19,999'}</div>
+                        </div>
+                        <div>
+                          <div className="text-[10px] text-slate-400 font-bold uppercase">Cohort Date</div>
+                          <div className="font-extrabold text-slate-900 mt-0.5">{p.cohortStart}</div>
+                        </div>
+                      </div>
+
+                      {/* Tools Taught Chips */}
+                      <div className="space-y-1.5">
+                        <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                          Tools & Stacks Mastered
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                          {(p.toolsTaught || ['OpenAI API', 'n8n', 'Python', 'Cursor', 'Docker']).map((tool) => (
+                            <span
+                              key={tool}
+                              className="px-2.5 py-1 bg-slate-100 text-slate-800 rounded-lg text-[11px] font-mono font-medium border border-slate-200/50"
+                            >
+                              {tool}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Capstone Project Highlight */}
+                      <div className="p-4 rounded-2xl bg-amber-50/80 border border-amber-200/90 space-y-1.5">
+                        <div className="text-[10px] font-bold text-amber-900 uppercase tracking-wider flex items-center gap-1.5">
+                          <Briefcase className="w-3.5 h-3.5 text-amber-700" />
+                          <span>Verified Capstone Project</span>
+                        </div>
+                        <div className="text-xs font-bold text-slate-900">
+                          {p.capstoneProject?.title || 'Autonomous Production System'}
+                        </div>
+                        <div className="text-[11px] text-slate-600 leading-relaxed">
+                          {p.capstoneProject?.description || 'Build and deploy a complete AI workflow from scratch.'}
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-xs font-bold text-slate-900">
-                      {p.capstoneProject?.title || 'Autonomous Production System'}
-                    </div>
-                    <div className="text-[11px] text-slate-600 leading-relaxed">
-                      {p.capstoneProject?.description || 'Build and deploy a complete AI workflow from scratch.'}
+
+                    {/* Footer CTAs */}
+                    <div className="pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
+                      <button
+                        onClick={() => handleOpenCurriculum(p)}
+                        className="px-4 py-2 text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-colors flex items-center gap-1.5"
+                      >
+                        <BookOpen className="w-3.5 h-3.5 text-slate-500" />
+                        <span>View Syllabus</span>
+                      </button>
+
+                      <button
+                        onClick={() => handleSelectForEnquiry(p)}
+                        className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-extrabold transition-colors shadow-sm flex items-center gap-1.5 cursor-pointer"
+                      >
+                        <span>Enquire for Cohort</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
                     </div>
                   </div>
                 </div>
-
-                {/* Footer CTAs */}
-                <div className="p-5 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-3">
-                  <button
-                    onClick={() => handleOpenCurriculum(p)}
-                    className="px-4 py-2 text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-200/70 rounded-xl transition-colors flex items-center gap-1.5"
-                  >
-                    <BookOpen className="w-3.5 h-3.5 text-slate-500" />
-                    <span>View Syllabus</span>
-                  </button>
-
-                  <button
-                    onClick={() => handleSelectForEnquiry(p)}
-                    className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-extrabold transition-colors shadow-sm flex items-center gap-1.5"
-                  >
-                    <span>Enquire for Cohort</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </section>
 
       {/* 5-Step Learning Roadmap / Pedagogy */}
-      <section id="pedagogy" className="bg-[#111927] text-white py-20 border-y border-slate-800">
+      <section id="pedagogy" className="bg-[#0b1120] text-white py-20 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
             <div className="text-xs font-bold text-amber-400 uppercase tracking-wider">How You Learn</div>
@@ -409,7 +469,7 @@ export default function UpwiseHome() {
             {roadmapSteps.map((s, idx) => (
               <div
                 key={idx}
-                className="bg-slate-900/90 border border-slate-800 p-6 rounded-2xl space-y-3 relative flex flex-col justify-between"
+                className="bg-slate-900/90 border border-slate-800 p-6 rounded-3xl space-y-3 relative flex flex-col justify-between"
               >
                 <div>
                   <div className="text-2xl font-black text-amber-400 font-mono">{s.step}</div>
@@ -427,7 +487,7 @@ export default function UpwiseHome() {
 
       {/* Admissions Enquiry Form */}
       <section id="admissions-enquiry" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xl p-8 sm:p-12">
+        <div className="bg-white rounded-3xl border border-slate-200/90 shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 sm:p-12">
           <div className="max-w-2xl mx-auto text-center space-y-3 mb-10">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold border border-amber-200">
               <Sparkles className="w-3.5 h-3.5 text-amber-600" />
@@ -464,49 +524,49 @@ export default function UpwiseHome() {
           <form onSubmit={handleEnquirySubmit} className="space-y-5 text-xs">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label className="block font-bold text-slate-700 mb-1">Full Name *</label>
+                <label className="block font-bold text-slate-700 mb-1.5">Full Name *</label>
                 <input
                   type="text"
                   required
                   placeholder="e.g. Priyanshu Singh"
                   value={enquiryForm.fullName}
                   onChange={(e) => setEnquiryForm({ ...enquiryForm, fullName: e.target.value })}
-                  className="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-medium text-slate-800"
+                  className="w-full p-3.5 rounded-2xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-medium text-slate-800"
                 />
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">Email Address *</label>
+                <label className="block font-bold text-slate-700 mb-1.5">Email Address *</label>
                 <input
                   type="email"
                   required
                   placeholder="you@domain.com"
                   value={enquiryForm.email}
                   onChange={(e) => setEnquiryForm({ ...enquiryForm, email: e.target.value })}
-                  className="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-medium text-slate-800"
+                  className="w-full p-3.5 rounded-2xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-medium text-slate-800"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label className="block font-bold text-slate-700 mb-1">Phone / WhatsApp Number *</label>
+                <label className="block font-bold text-slate-700 mb-1.5">Phone / WhatsApp Number *</label>
                 <input
                   type="tel"
                   required
                   placeholder="+91 98765 43210"
                   value={enquiryForm.phone}
                   onChange={(e) => setEnquiryForm({ ...enquiryForm, phone: e.target.value })}
-                  className="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-medium text-slate-800"
+                  className="w-full p-3.5 rounded-2xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-medium text-slate-800"
                 />
               </div>
 
               <div>
-                <label className="block font-bold text-slate-700 mb-1">Current Background</label>
+                <label className="block font-bold text-slate-700 mb-1.5">Current Background</label>
                 <select
                   value={enquiryForm.educationOrProfession}
                   onChange={(e) => setEnquiryForm({ ...enquiryForm, educationOrProfession: e.target.value })}
-                  className="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-semibold text-slate-800"
+                  className="w-full p-3.5 rounded-2xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-semibold text-slate-800 cursor-pointer"
                 >
                   <option value="College Student">College Student (Final / Pre-final Year)</option>
                   <option value="Working Professional">Software Engineer / Developer</option>
@@ -518,11 +578,11 @@ export default function UpwiseHome() {
             </div>
 
             <div>
-              <label className="block font-bold text-slate-700 mb-1">Programme of Interest *</label>
+              <label className="block font-bold text-slate-700 mb-1.5">Programme of Interest *</label>
               <select
                 value={enquiryForm.programmeInterested}
                 onChange={(e) => setEnquiryForm({ ...enquiryForm, programmeInterested: e.target.value })}
-                className="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-semibold text-slate-800"
+                className="w-full p-3.5 rounded-2xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-semibold text-slate-800 cursor-pointer"
               >
                 {programmes.map((p) => (
                   <option key={p.title} value={p.title}>
@@ -533,7 +593,7 @@ export default function UpwiseHome() {
             </div>
 
             <div>
-              <label className="block font-bold text-slate-700 mb-1">
+              <label className="block font-bold text-slate-700 mb-1.5">
                 Your Primary Learning Goal or Questions
               </label>
               <textarea
@@ -541,14 +601,14 @@ export default function UpwiseHome() {
                 placeholder="What project are you hoping to build or which role are you targeting?"
                 value={enquiryForm.learningObjective}
                 onChange={(e) => setEnquiryForm({ ...enquiryForm, learningObjective: e.target.value })}
-                className="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-medium text-slate-800"
+                className="w-full p-3.5 rounded-2xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-medium text-slate-800"
               />
             </div>
 
             <button
               type="submit"
               disabled={enquiryLoading}
-              className="w-full py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+              className="w-full py-4 rounded-2xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
             >
               {enquiryLoading ? (
                 <>
@@ -575,7 +635,7 @@ export default function UpwiseHome() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {faqs.map((f, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 space-y-2">
+            <div key={idx} className="bg-white p-7 rounded-3xl border border-slate-200 space-y-2 shadow-xs">
               <h3 className="font-bold text-slate-900 text-sm flex items-start gap-2">
                 <HelpCircle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                 <span>{f.q}</span>
@@ -602,7 +662,7 @@ export default function UpwiseHome() {
               </div>
               <button
                 onClick={() => setCurriculumModalOpen(false)}
-                className="text-slate-400 hover:text-slate-600 p-1.5 rounded-xl hover:bg-slate-100"
+                className="text-slate-400 hover:text-slate-600 p-1.5 rounded-xl hover:bg-slate-100 cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -683,7 +743,7 @@ export default function UpwiseHome() {
                   setCurriculumModalOpen(false);
                   handleSelectForEnquiry(selectedProgramme);
                 }}
-                className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-extrabold transition-colors shadow-sm flex items-center gap-1.5"
+                className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-extrabold transition-colors shadow-sm flex items-center gap-1.5 cursor-pointer"
               >
                 <span>Apply for this Cohort</span>
                 <ArrowRight className="w-3.5 h-3.5" />
