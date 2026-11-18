@@ -1,6 +1,68 @@
 {
   "providers": [
     {
+      "name": "Alpha Vet Care Emergency Center",
+      "category": "Veterinary Clinics",
+      "address": "101 Marine Drive",
+      "city": "Mumbai",
+      "phone": "+91 22 9988 7766",
+      "emergencyPhone": "",
+      "email": "",
+      "website": "",
+      "openingHours": "Mon-Sat: 9:00 AM - 8:00 PM",
+      "services": [
+        "General Care"
+      ],
+      "facilities": [],
+      "description": "Comprehensive animal healthcare and welfare services.",
+      "isVerified": false,
+      "is24x7": false,
+      "rating": 5,
+      "reviewCount": 1,
+      "distanceKm": 3,
+      "reviews": [
+        {
+          "author": "PawNexus Verification Team",
+          "rating": 5,
+          "date": "2026-11-18",
+          "comment": "New listing submitted by owner. Verification badge pending administrative audit."
+        }
+      ],
+      "id": "pawnexus-prov-1795012165999",
+      "_id": "pawnexus-prov-1795012165999"
+    },
+    {
+      "name": "Alpha Vet Care Emergency Center",
+      "category": "Veterinary Clinics",
+      "address": "101 Marine Drive",
+      "city": "Mumbai",
+      "phone": "+91 22 9988 7766",
+      "emergencyPhone": "",
+      "email": "",
+      "website": "",
+      "openingHours": "Mon-Sat: 9:00 AM - 8:00 PM",
+      "services": [
+        "General Care"
+      ],
+      "facilities": [],
+      "description": "Comprehensive animal healthcare and welfare services.",
+      "isVerified": false,
+      "is24x7": false,
+      "rating": 5,
+      "reviewCount": 1,
+      "distanceKm": 3,
+      "reviews": [
+        {
+          "author": "PawNexus Verification Team",
+          "rating": 5,
+          "date": "2026-11-18",
+          "comment": "New listing submitted by owner. Verification badge pending administrative audit."
+        }
+      ],
+      "id": "pawnexus-prov-1795011854004",
+      "_id": "pawnexus-prov-1795011854004"
+    },
+    {
       "name": "Restart Persistence Clinic 1795011124346",
       "category": "Veterinary Clinics",
       "address": "100 Feet Road, Indiranagar",
@@ -1202,9 +1264,137 @@
       "status": "Pending",
       "createdAt": "2026-11-18T14:11:54.987Z",
       "id": "corr-1795011114987"
+    },
+    {
+      "providerId": "pawnexus-prov-1795011124411",
+      "providerName": "Restart Persistence Clinic 1795011124346",
+      "submitterName": "Dr. Vikram",
+      "submitterEmail": "vikram@example.com",
+      "submitterPhone": "",
+      "relationshipToBusiness": "Customer/Visitor",
+      "correctionType": "Wrong Operating Hours",
+      "details": "Facility now open 24 hours on weekends.",
+      "status": "Pending",
+      "createdAt": "2026-11-18T14:24:14.008Z",
+      "id": "corr-1795011854008"
+    },
+    {
+      "providerId": "pawnexus-prov-1795011854004",
+      "providerName": "Alpha Vet Care Emergency Center",
+      "submitterName": "Dr. Vikram",
+      "submitterEmail": "vikram@example.com",
+      "submitterPhone": "",
+      "relationshipToBusiness": "Customer/Visitor",
+      "correctionType": "Wrong Operating Hours",
+      "details": "Facility now open 24 hours on weekends.",
+      "status": "Pending",
+      "createdAt": "2026-11-18T14:29:26.002Z",
+      "id": "corr-1795012166002"
     }
   ],
   "workflowLogs": [
+    {
+      "id": "wf-log-1795012166018",
+      "timestamp": "2026-11-18T14:29:26.018Z",
+      "source": "n8n Webhook Listener",
+      "trigger": "n8n External Webhook",
+      "topic": "Scaling B2B SaaS from 0 to $1M ARR",
+      "status": "Ready for Human Review",
+      "tokensUsed": 1240,
+      "latencyMs": 0,
+      "humanApprovalStatus": "In Review",
+      "steps": [
+        {
+          "step": "Webhook Ingestion & Payload Validation",
+          "status": "Passed",
+          "durationMs": 15
+        },
+        {
+          "step": "AI Structured Schema Generation",
+          "status": "Completed",
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "id": "wf-log-1795012166015",
+      "timestamp": "2026-11-18T14:29:26.015Z",
+      "source": "Pawzz Intelligent AI Engine",
+      "trigger": "SlidePilot Project Wizard",
+      "topic": "How to Build Production AI Agents with n8n",
+      "status": "Completed",
+      "tokensUsed": 1240,
+      "latencyMs": 350,
+      "humanApprovalStatus": "Draft",
+      "steps": [
+        {
+          "step": "Validation",
+          "status": "Passed",
+          "durationMs": 20
+        },
+        {
+          "step": "Processing",
+          "status": "Completed",
+          "durationMs": 350
+        },
+        {
+          "step": "Finalization",
+          "status": "Passed",
+          "durationMs": 15
+        }
+      ]
+    },
+    {
+      "id": "wf-log-1795011854024",
+      "timestamp": "2026-11-18T14:24:14.024Z",
+      "source": "n8n Webhook Listener",
+      "trigger": "n8n External Webhook",
+      "topic": "Scaling B2B SaaS from 0 to $1M ARR",
+      "status": "Ready for Human Review",
+      "tokensUsed": 1240,
+      "latencyMs": 0,
+      "humanApprovalStatus": "In Review",
+      "steps": [
+        {
+          "step": "Webhook Ingestion & Payload Validation",
+          "status": "Passed",
+          "durationMs": 15
+        },
+        {
+          "step": "AI Structured Schema Generation",
+          "status": "Completed",
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "id": "wf-log-1795011854022",
+      "timestamp": "2026-11-18T14:24:14.022Z",
+      "source": "Pawzz Intelligent AI Engine",
+      "trigger": "SlidePilot Project Wizard",
+      "topic": "How to Build Production AI Agents with n8n",
+      "status": "Completed",
+      "tokensUsed": 1240,
+      "latencyMs": 350,
+      "humanApprovalStatus": "Draft",
+      "steps": [
+        {
+          "step": "Validation",
+          "status": "Passed",
+          "durationMs": 20
+        },
+        {
+          "step": "Processing",
+          "status": "Completed",
+          "durationMs": 350
+        },
+        {
+          "step": "Finalization",
+          "status": "Passed",
+          "durationMs": 15
+        }
+      ]
+    },
     {
       "id": "wf-log-1795011115001",
       "timestamp": "2026-11-18T14:11:55.001Z",
