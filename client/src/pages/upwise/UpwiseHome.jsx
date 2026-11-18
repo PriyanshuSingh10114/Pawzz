@@ -174,43 +174,6 @@ export default function UpwiseHome() {
 
   return (
     <div className="min-h-screen bg-[#faf8f5] text-slate-900 font-sans selection:bg-amber-500 selection:text-slate-950">
-      {/* Top Banner Navigation Header */}
-      <div className="bg-[#0b1120] text-slate-200 border-b border-slate-800 sticky top-16 z-30 shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between text-xs">
-          <div className="flex items-center gap-6">
-            <span className="font-bold text-amber-400 flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-              Upwise Cohort Admissions Open
-            </span>
-            <div className="hidden md:flex items-center gap-4 text-slate-400">
-              <a href="#programmes" className="hover:text-white transition-colors">
-                Flagship Programmes
-              </a>
-              <a href="#pedagogy" className="hover:text-white transition-colors">
-                5-Step Learning Roadmap
-              </a>
-              <a href="#admissions-enquiry" className="hover:text-white transition-colors">
-                Admissions & Fees
-              </a>
-              <a href="#faqs" className="hover:text-white transition-colors">
-                FAQ
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <a
-              href="#admissions-enquiry"
-              className="text-amber-400 hover:text-amber-300 font-bold hover:underline"
-            >
-              Talk to an Advisor
-            </a>
-            <span className="text-slate-600">|</span>
-            <span className="text-[11px] text-slate-400">Next Cohort: Nov 25, 2026</span>
-          </div>
-        </div>
-      </div>
-
       {/* Hero Section: Two Column Editorial Modern Layout */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#0b1120] via-[#10192e] to-[#0b1120] text-white pt-16 pb-24 border-b border-slate-800">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />

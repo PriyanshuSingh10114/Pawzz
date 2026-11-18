@@ -224,65 +224,60 @@ export default function FramewiseStudio() {
 
   return (
     <div className="min-h-screen bg-[#0b0f19] text-slate-100 font-sans selection:bg-indigo-500 selection:text-white">
-      {/* Studio Sub-Navigation Bar */}
-      <nav className="bg-[#111827] border-b border-slate-800 sticky top-16 z-30 shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 py-3">
-            {/* Left Tabs */}
-            <div className="flex items-center gap-1 overflow-x-auto no-scrollbar text-xs">
-              {[
-                { key: 'studio', label: 'Studio Workspace', icon: Layout },
-                { key: 'create', label: 'Create New (AI)', icon: Sparkles },
-                { key: 'projects', label: `My Carousels (${allProjects.length})`, icon: FolderKanban },
-                { key: 'templates', label: 'Templates (5)', icon: Layers },
-                { key: 'workflow', label: 'AI & n8n Pipeline', icon: Workflow },
-              ].map((tab) => {
-                const Icon = tab.icon;
-                const active = activeTab === tab.key;
-                return (
-                  <button
-                    key={tab.key}
-                    onClick={() => setActiveTab(tab.key)}
-                    className={`flex items-center gap-1.5 px-3 py-2 rounded-xl font-bold transition-all shrink-0 ${
-                      active
-                        ? 'bg-indigo-600 text-white shadow-sm'
-                        : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
-                    }`}
-                  >
-                    <Icon className="w-3.5 h-3.5" />
-                    <span>{tab.label}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Right Quick Actions */}
-            <div className="flex items-center gap-2 self-end sm:self-auto text-xs">
-              <button
-                onClick={handleLoadSampleCarousel}
-                className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold border border-amber-500/20 transition-colors flex items-center gap-1.5"
-                title="Reset to 10-slide sample carousel"
-              >
-                <RotateCcw className="w-3 h-3" />
-                <span>Load Sample Carousel</span>
-              </button>
-
-              {activeProject && (
+      {/* Main Container */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+        {/* Studio Workspace Toolbar */}
+        <div className="p-2.5 bg-[#111827] border border-slate-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+          {/* Left Tabs */}
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar text-xs">
+            {[
+              { key: 'studio', label: 'Studio Workspace', icon: Layout },
+              { key: 'create', label: 'Create New (AI)', icon: Sparkles },
+              { key: 'projects', label: `My Carousels (${allProjects.length})`, icon: FolderKanban },
+              { key: 'templates', label: 'Templates (5)', icon: Layers },
+              { key: 'workflow', label: 'AI & n8n Pipeline', icon: Workflow },
+            ].map((tab) => {
+              const Icon = tab.icon;
+              const active = activeTab === tab.key;
+              return (
                 <button
-                  onClick={() => setExportModalOpen(true)}
-                  className="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition-colors flex items-center gap-1.5 shadow-sm"
+                  key={tab.key}
+                  onClick={() => setActiveTab(tab.key)}
+                  className={`flex items-center gap-1.5 px-3 py-2 rounded-xl font-bold transition-all shrink-0 cursor-pointer ${
+                    active
+                      ? 'bg-indigo-600 text-white shadow-sm'
+                      : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
+                  }`}
                 >
-                  <FileDown className="w-3.5 h-3.5" />
-                  <span>Export (PNG / PDF)</span>
+                  <Icon className="w-3.5 h-3.5" />
+                  <span>{tab.label}</span>
                 </button>
-              )}
-            </div>
+              );
+            })}
+          </div>
+
+          {/* Right Quick Actions */}
+          <div className="flex items-center gap-2 self-end sm:self-auto text-xs">
+            <button
+              onClick={handleLoadSampleCarousel}
+              className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold border border-amber-500/20 transition-colors flex items-center gap-1.5 cursor-pointer"
+              title="Reset to 10-slide sample carousel"
+            >
+              <RotateCcw className="w-3 h-3" />
+              <span>Load Sample Carousel</span>
+            </button>
+
+            {activeProject && (
+              <button
+                onClick={() => setExportModalOpen(true)}
+                className="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition-colors flex items-center gap-1.5 shadow-sm cursor-pointer"
+              >
+                <FileDown className="w-3.5 h-3.5" />
+                <span>Export (PNG / PDF)</span>
+              </button>
+            )}
           </div>
         </div>
-      </nav>
-
-      {/* Main Container */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Loading State */}
         {loading && (
           <div className="flex items-center justify-center py-24 text-slate-400 gap-3">

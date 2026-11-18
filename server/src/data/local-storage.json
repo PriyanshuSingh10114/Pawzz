@@ -1,6 +1,37 @@
 {
   "providers": [
     {
+      "name": "Alpha Vet Care Emergency Center",
+      "category": "Veterinary Clinics",
+      "address": "101 Marine Drive",
+      "city": "Mumbai",
+      "phone": "+91 22 9988 7766",
+      "emergencyPhone": "",
+      "email": "",
+      "website": "",
+      "openingHours": "Mon-Sat: 9:00 AM - 8:00 PM",
+      "services": [
+        "General Care"
+      ],
+      "facilities": [],
+      "description": "Comprehensive animal healthcare and welfare services.",
+      "isVerified": false,
+      "is24x7": false,
+      "rating": 5,
+      "reviewCount": 1,
+      "distanceKm": 3,
+      "reviews": [
+        {
+          "author": "PawNexus Verification Team",
+          "rating": 5,
+          "date": "2026-11-18",
+          "comment": "New listing submitted by owner. Verification badge pending administrative audit."
+        }
+      ],
+      "id": "pawnexus-prov-1794981856973",
+      "_id": "pawnexus-prov-1794981856973"
+    },
+    {
       "name": "Restart Persistence Clinic 1794981199125",
       "category": "Veterinary Clinics",
       "address": "100 Feet Road, Indiranagar",
@@ -1054,9 +1085,73 @@
       "status": "Pending",
       "createdAt": "2026-11-18T05:53:11.730Z",
       "id": "corr-1794981191730"
+    },
+    {
+      "providerId": "pawnexus-prov-1794981199197",
+      "providerName": "Restart Persistence Clinic 1794981199125",
+      "submitterName": "Dr. Vikram",
+      "submitterEmail": "vikram@example.com",
+      "submitterPhone": "",
+      "relationshipToBusiness": "Customer/Visitor",
+      "correctionType": "Wrong Operating Hours",
+      "details": "Facility now open 24 hours on weekends.",
+      "status": "Pending",
+      "createdAt": "2026-11-18T06:04:16.978Z",
+      "id": "corr-1794981856978"
     }
   ],
   "workflowLogs": [
+    {
+      "id": "wf-log-1794981856997",
+      "timestamp": "2026-11-18T06:04:16.997Z",
+      "source": "n8n Webhook Listener",
+      "trigger": "n8n External Webhook",
+      "topic": "Scaling B2B SaaS from 0 to $1M ARR",
+      "status": "Ready for Human Review",
+      "tokensUsed": 1240,
+      "latencyMs": 0,
+      "humanApprovalStatus": "In Review",
+      "steps": [
+        {
+          "step": "Webhook Ingestion & Payload Validation",
+          "status": "Passed",
+          "durationMs": 15
+        },
+        {
+          "step": "AI Structured Schema Generation",
+          "status": "Completed",
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "id": "wf-log-1794981856995",
+      "timestamp": "2026-11-18T06:04:16.995Z",
+      "source": "NexaStudio Intelligent AI Engine (Demo Mode)",
+      "trigger": "SlidePilot Project Wizard",
+      "topic": "How to Build Production AI Agents with n8n",
+      "status": "Completed",
+      "tokensUsed": 1240,
+      "latencyMs": 350,
+      "humanApprovalStatus": "Draft",
+      "steps": [
+        {
+          "step": "Validation",
+          "status": "Passed",
+          "durationMs": 20
+        },
+        {
+          "step": "Processing",
+          "status": "Completed",
+          "durationMs": 350
+        },
+        {
+          "step": "Finalization",
+          "status": "Passed",
+          "durationMs": 15
+        }
+      ]
+    },
     {
       "id": "wf-log-1794981191749",
       "timestamp": "2026-11-18T05:53:11.749Z",

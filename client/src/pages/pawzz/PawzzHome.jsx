@@ -147,27 +147,6 @@ export default function PawzzHome() {
 
   return (
     <div className="min-h-screen bg-[#fcfbfa] text-slate-900 font-sans selection:bg-emerald-600 selection:text-white">
-      {/* Sub-Header Notice */}
-      <div className="bg-emerald-950 text-emerald-100 py-2 px-4 border-b border-emerald-900/60 text-xs">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-semibold text-white">24/7 Emergency Dispatch Active</span>
-            <span className="hidden sm:inline text-emerald-300">• Verified Animal Healthcare Network across India</span>
-          </div>
-          <div className="flex items-center gap-4 text-[11px]">
-            <Link to="/pawzz/search?emergency=true" className="text-amber-300 hover:text-white font-bold underline">
-              Find 24/7 ICU Hospitals
-            </Link>
-            <span className="text-emerald-700">|</span>
-            <a href="tel:+919876543210" className="text-white hover:text-emerald-300 font-bold flex items-center gap-1">
-              <Phone className="w-3 h-3 text-emerald-400" />
-              <span>+91 98765 43210</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Hero Section: Two-Column Top Tier Startup Layout */}
       <section className="relative overflow-hidden bg-gradient-to-b from-emerald-50/70 via-white to-[#fcfbfa] pt-12 pb-20 border-b border-emerald-100/60">
         <div className="absolute top-0 right-0 -mt-24 -mr-24 w-[600px] h-[600px] bg-emerald-200/20 rounded-full blur-3xl pointer-events-none" />

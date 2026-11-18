@@ -187,8 +187,8 @@ export default function PawzzSearch() {
 
   return (
     <div className="min-h-screen bg-[#fafaf8] text-slate-900 font-sans selection:bg-emerald-600 selection:text-white">
-      {/* Top Search & Filter Bar */}
-      <section className="bg-white border-b border-slate-200 sticky top-16 z-30 shadow-xs">
+      {/* Search Header Banner */}
+      <section className="bg-white border-b border-slate-200/80 py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <form
             onSubmit={handleSearchSubmit}

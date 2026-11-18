@@ -23,37 +23,12 @@ import {
 export default function RootPortal() {
   return (
     <div className="min-h-screen bg-[#0d1117] text-slate-100 font-sans selection:bg-emerald-500 selection:text-slate-950 flex flex-col justify-between">
-      {/* Top Header */}
-      <header className="border-b border-slate-800/80 bg-[#161b22]/70 backdrop-blur-md py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-emerald-600 via-emerald-500 to-teal-500 flex items-center justify-center text-white font-extrabold text-lg shadow-sm">
-              🐾
-            </div>
-            <div>
-              <div className="font-extrabold text-white text-base tracking-tight leading-none">
-                Paw<span className="text-emerald-400">zz</span>
-              </div>
-              <div className="text-[10px] text-slate-400 font-semibold tracking-wider uppercase mt-0.5">
-                Founder Product Assessment
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4 text-xs">
-            <div className="hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Developed by <strong>Priyanshu Singh</strong></span>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Switcher Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-1 flex flex-col justify-center">
-        <div className="max-w-3xl mb-12 space-y-3">
+        <div className="max-w-3xl mb-12 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">
-            <span>Direct Product Launchpad</span>
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Founder Assessment Launchpad • Developed by <strong>Priyanshu Singh</strong></span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
             Three Working Products. <br />
