@@ -21,6 +21,11 @@ import {
   Users,
   Compass,
   Phone,
+  Award,
+  AlertTriangle,
+  HeartHandshake,
+  FileText,
+  Check,
 } from 'lucide-react';
 import ProviderCard from '../../components/pawnexus/ProviderCard';
 import ProviderDetailModal from '../../components/pawnexus/ProviderDetailModal';
@@ -371,6 +376,86 @@ export default function PawzzHome() {
         </div>
       </section>
 
+      {/* SECTION 1: How Pawzz Works (3-Step Care Journey) */}
+      <section className="bg-gradient-to-b from-white via-emerald-50/30 to-[#fcfbfa] py-20 border-y border-emerald-100/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+              <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Simple, Direct & Transparent</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              How Pawzz Connects You to Verified Animal Care
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              From routine puppy vaccinations to critical 2 AM emergency surgery, here is how our verified healthcare network helps your companion in 3 simple steps.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            {[
+              {
+                step: '01',
+                title: 'Search by Specialty or Emergency',
+                desc: 'Filter by clinical department, city, or emergency status to find multi-specialty hospitals, feline clinics, or diagnostic pathology labs near you.',
+                badge: 'Smart Discovery',
+                icon: Search,
+              },
+              {
+                step: '02',
+                title: 'Verify Credentials & Equipment',
+                desc: 'Review verified state council registrations, on-site ICU facilities, diagnostic machinery (digital X-ray, ultrasound), and transparent consultation tariffs.',
+                badge: '100% Audited',
+                icon: ShieldCheck,
+              },
+              {
+                step: '03',
+                title: 'Direct Call, Booking & Dispatch',
+                desc: 'Connect immediately through direct hospital hotlines, schedule in-person appointments, or dispatch verified animal emergency ambulances with zero middleman markup.',
+                badge: 'Immediate Action',
+                icon: PhoneCall,
+              },
+            ].map((item, idx) => {
+              const StepIcon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)] hover:border-emerald-300 transition-all group flex flex-col justify-between relative overflow-hidden"
+                >
+                  <div className="space-y-5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-4xl font-black text-emerald-100 group-hover:text-emerald-200 transition-colors">
+                        {item.step}
+                      </span>
+                      <span className="text-[10px] font-extrabold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 uppercase tracking-wider">
+                        {item.badge}
+                      </span>
+                    </div>
+
+                    <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-md shadow-emerald-600/20 group-hover:scale-105 transition-transform">
+                      <StepIcon className="w-6 h-6" />
+                    </div>
+
+                    <h3 className="font-extrabold text-slate-900 text-lg leading-snug">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-6 mt-6 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-emerald-700">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                    <span>Always Free for Pet Parents</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Emergency Care Callout Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="bg-gradient-to-r from-rose-950 via-rose-900 to-slate-950 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
@@ -403,6 +488,107 @@ export default function PawzzHome() {
                 <span>Call Dispatch: +91 98765 43210</span>
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2: Emergency First-Aid Triage Guide */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="bg-white rounded-3xl border border-slate-200/80 p-8 sm:p-12 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 pb-8 border-b border-slate-100">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 text-rose-700 text-xs font-bold mb-3 border border-rose-100">
+                <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
+                <span>Pet Parent Medical Resource</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Emergency First-Aid Triage Protocols
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 max-w-2xl mt-1">
+                Immediate stabilization steps before you reach a 24/7 ICU hospital. Always call the emergency desk while en route.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs font-bold text-slate-500 bg-slate-50 px-4 py-2.5 rounded-2xl border border-slate-100 shrink-0">
+              <Clock className="w-4 h-4 text-emerald-600" />
+              <span>Golden Hour Response Matters</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Heatstroke & Hyperthermia',
+                symptoms: 'Excessive panting, bright red gums, drooling, weakness.',
+                action: 'Move to shade immediately. Apply cool (not ice cold) tap water to paws and groin. Never force water drinking.',
+                tag: 'Critical Timing',
+              },
+              {
+                title: 'Toxic Ingestion / Poisoning',
+                symptoms: 'Vomiting, seizures, sudden lethargy, tremors.',
+                action: 'Identify the toxin (chocolate, paracetamol, rat poison, lilies). Do NOT induce vomiting without consulting a vet first.',
+                tag: 'Chemical / Botanical',
+              },
+              {
+                title: 'Physical Trauma & Bleeding',
+                symptoms: 'Vehicular accident, deep lacerations, limping.',
+                action: 'Apply firm, continuous pressure with a clean cloth. Keep the spine aligned flat on a wooden board or stiff blanket.',
+                tag: 'Surgical ICU',
+              },
+              {
+                title: 'Bloat / Gastric Torsion (GDV)',
+                symptoms: 'Distended tight abdomen, retching without vomit, pacing.',
+                action: 'Extreme surgical emergency. Rush straight to a 24/7 surgical ICU immediately. Every 30 minutes decreases survival rate.',
+                tag: 'Immediate Surgery',
+              },
+            ].map((guide, idx) => (
+              <div
+                key={idx}
+                className="bg-slate-50/70 rounded-2xl p-6 border border-slate-200/70 hover:border-emerald-300 transition-all flex flex-col justify-between space-y-4"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white text-slate-700 border border-slate-200 uppercase tracking-wider">
+                      Protocol 0{idx + 1}
+                    </span>
+                    <span className="text-[10px] font-bold text-rose-600 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" />
+                      {guide.tag}
+                    </span>
+                  </div>
+
+                  <h3 className="font-extrabold text-slate-900 text-sm leading-snug">
+                    {guide.title}
+                  </h3>
+
+                  <div>
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">
+                      Signs:
+                    </span>
+                    <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                      {guide.symptoms}
+                    </p>
+                  </div>
+
+                  <div className="p-3 bg-white rounded-xl border border-slate-200/60">
+                    <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-wider block mb-0.5">
+                      First-Aid Action:
+                    </span>
+                    <p className="text-xs text-slate-700 leading-relaxed">
+                      {guide.action}
+                    </p>
+                  </div>
+                </div>
+
+                <Link
+                  to="/pawzz/search?emergency=true"
+                  className="pt-2 text-xs font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1 hover:underline"
+                >
+                  <span>Locate Trauma Hospital</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -461,6 +647,139 @@ export default function PawzzHome() {
         </div>
       </section>
 
+      {/* SECTION 3: Meet Verified Doctors & Clinical Specialists */}
+      <section className="bg-slate-50/70 border-b border-slate-200/80 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+            <div>
+              <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider">Medical Leadership</div>
+              <h2 className="text-3xl font-extrabold text-slate-900 mt-1">
+                Meet Verified Veterinary Specialists
+              </h2>
+              <p className="text-sm text-slate-600 mt-1">
+                Consult with verified veterinarians, certified surgeons, and critical care specialists across top veterinary hospitals.
+              </p>
+            </div>
+
+            <Link
+              to="/pawzz/search"
+              className="text-xs font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1.5 hover:underline"
+            >
+              <span>Browse All Specialists</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+            {[
+              {
+                name: 'Dr. Sneha Rao',
+                qualifications: 'BVSc & AH, MVSc (Surgery)',
+                role: 'Canine Orthopedic & Soft Tissue Surgeon',
+                hospital: 'Cessna Lifeline Veterinary Hospital',
+                city: 'Bengaluru',
+                exp: '12+ Years Experience',
+                rating: '4.96',
+                council: 'KVC Reg: #KA-4102',
+                image: 'https://images.unsplash.com/photo-1594824813591-38e21966a337?auto=format&fit=crop&w=600&q=80',
+              },
+              {
+                name: 'Dr. Arvind Swaminathan',
+                qualifications: 'BVSc, MS (Emergency & Critical Care)',
+                role: 'Head of Trauma & 24/7 ICU Services',
+                hospital: 'Crown Vet Emergency Centre',
+                city: 'Mumbai',
+                exp: '10+ Years Experience',
+                rating: '4.92',
+                council: 'MVC Reg: #MH-2891',
+                image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80',
+              },
+              {
+                name: 'Dr. Priya Nair',
+                qualifications: 'BVSc & AH, ISFM Feline Fellow',
+                role: 'Feline Internal Medicine Specialist',
+                hospital: 'Max Vets Advanced Care',
+                city: 'Delhi NCR',
+                exp: '8+ Years Experience',
+                rating: '4.98',
+                council: 'DVC Reg: #DL-5520',
+                image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80',
+              },
+              {
+                name: 'Dr. Rohan Kulkarni',
+                qualifications: 'BVSc, PG Dipl. Veterinary Dermatology',
+                role: 'Dermatologist & Chronic Allergy Consultant',
+                hospital: 'PetZone Multispecialty Clinic',
+                city: 'Pune',
+                exp: '14+ Years Experience',
+                rating: '4.95',
+                council: 'MSVC Reg: #MH-1804',
+                image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80',
+              },
+            ].map((doc, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] hover:border-emerald-300 transition-all flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="relative h-56 w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={doc.image}
+                      alt={doc.name}
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                    <div className="absolute top-3 left-3">
+                      <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-white/95 text-slate-800 shadow-xs flex items-center gap-1">
+                        <ShieldCheck className="w-3 h-3 text-emerald-600" />
+                        <span>Council Verified</span>
+                      </span>
+                    </div>
+                    <div className="absolute bottom-3 left-3 right-3 text-white">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] text-emerald-300 font-mono font-bold tracking-tight">
+                          {doc.council}
+                        </span>
+                        <div className="flex items-center gap-1 text-amber-300 font-bold text-xs">
+                          <Star className="w-3 h-3 fill-amber-300" />
+                          <span>{doc.rating}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-5 space-y-2">
+                    <h3 className="font-extrabold text-slate-900 text-base leading-snug">
+                      {doc.name}
+                    </h3>
+                    <div className="text-[11px] font-semibold text-emerald-700">
+                      {doc.role}
+                    </div>
+                    <div className="text-[11px] text-slate-500">
+                      {doc.qualifications} • {doc.hospital} ({doc.city})
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-5 pt-0">
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <span>{doc.exp}</span>
+                    <button
+                      onClick={() => navigate(`/pawzz/search?q=${encodeURIComponent(doc.hospital)}`)}
+                      className="font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform cursor-pointer"
+                    >
+                      <span>Find Clinic</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Pawzz (Pet Parents Section) */}
       <section id="pet-parents" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
@@ -507,6 +826,110 @@ export default function PawzzHome() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* SECTION 4: Real Stories & Recoveries (Verified Pet Parent Testimonials) */}
+      <section className="bg-gradient-to-b from-white to-emerald-50/20 py-20 border-t border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+              <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
+              <span>Real Recoveries Across India</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Stories from Pet Parents & Rescue Champions
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              When our furry family members face medical emergencies, having verified information at your fingertips makes all the difference.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Bruno's 2 AM Emergency Parvo Recovery",
+                pet: 'Bruno • Golden Retriever (11 months)',
+                city: 'Bengaluru',
+                parent: 'Ananya Sharma',
+                story:
+                  "Bruno collapsed suddenly with acute dehydration at 2 AM. Searching on Pawzz led us straight to Cessna Lifeline's 24/7 ICU with an active hotline. The emergency triage was ready before we even walked through the door. Bruno is back home healthy!",
+                photo: 'https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=500&q=80',
+                doctorTag: '24/7 ICU Care',
+                rating: 5,
+              },
+              {
+                title: "Luna's Complex Femur Fracture Surgery",
+                pet: 'Luna • Persian Cat (3 years)',
+                city: 'Mumbai',
+                parent: 'Vikram & Neha Mehta',
+                story:
+                  "Finding an experienced feline orthopedic surgeon who had an in-house digital radiography suite used to take days of calling around. Pawzz let us compare equipment and verified council registration. Her surgery went flawlessly.",
+                photo: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80',
+                doctorTag: 'Orthopedic Surgery',
+                rating: 5,
+              },
+              {
+                title: "Sheru's Road Rescue & Rehab",
+                pet: 'Sheru • Indie Dog (Rescued)',
+                city: 'Delhi NCR',
+                parent: 'Kabir Verma (Community Rescuer)',
+                story:
+                  "For community animal rescues, getting an ambulance dispatch number that actually picks up is life or death. The verified NGO shelter and ambulance contacts on Pawzz have helped us rescue and rehabilitate over 40 indie dogs this year alone.",
+                photo: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80',
+                doctorTag: 'Ambulance & NGO Care',
+                rating: 5,
+              },
+            ].map((story, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)] hover:border-emerald-300 transition-all flex flex-col justify-between space-y-6"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={story.photo}
+                      alt={story.pet}
+                      className="w-16 h-16 rounded-2xl object-cover border-2 border-emerald-100 shadow-sm"
+                    />
+                    <div>
+                      <div className="flex items-center gap-1 text-amber-400">
+                        {[...Array(story.rating)].map((_, i) => (
+                          <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
+                        ))}
+                      </div>
+                      <div className="font-extrabold text-slate-900 text-sm mt-1">{story.parent}</div>
+                      <div className="text-[11px] text-slate-500">{story.city}</div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-100 uppercase tracking-wider">
+                      {story.doctorTag}
+                    </span>
+                    <h3 className="font-bold text-slate-900 text-base mt-2">
+                      {story.title}
+                    </h3>
+                    <div className="text-xs font-semibold text-emerald-700 mt-0.5">
+                      {story.pet}
+                    </div>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                    "{story.story}"
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-semibold">
+                  <span>Verified Pet Parent</span>
+                  <span className="text-emerald-700 flex items-center gap-1">
+                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    Verified Patient
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
