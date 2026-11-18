@@ -18,7 +18,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Standalone digital product suite engineered by <strong>Priyanshu Singh</strong> for founder assessment.
+              End-to-end digital ecosystem engineered by <strong>Priyanshu Singh</strong>. Connecting animal healthcare discovery, practical engineering education, and creative social automation.
             </p>
             <div className="flex items-center gap-2 text-emerald-400 font-medium text-xs">
               <ShieldCheck className="w-4 h-4 shrink-0" />

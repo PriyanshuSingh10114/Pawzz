@@ -28,16 +28,16 @@ export default function RootPortal() {
         <div className="max-w-3xl mb-12 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Founder Assessment Launchpad • Developed by <strong>Priyanshu Singh</strong></span>
+            <span>Pawzz Ecosystem Gateway • Engineered by <strong>Priyanshu Singh</strong></span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Three Working Products. <br />
+            One Unified Ecosystem. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400">
-              Ready for Founder Demonstration.
+              Animal Healthcare, AI Skills & Content Studio.
             </span>
           </h1>
           <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl">
-            Select a product below to enter its dedicated, standalone user experience. Each product has its own information architecture, design tokens, and functional backend integration.
+            Production-grade platforms built for real-world impact: discover verified veterinary healthcare across India, master practical AI engineering, and produce social carousels with autonomous pipelines.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function RootPortal() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#161b22] via-[#161b22]/40 to-transparent" />
               <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
                 <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-500/30 uppercase tracking-wider font-mono">
-                  Deliverable 1
+                  Healthcare Network
                 </span>
                 <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-white/90 text-slate-900">
                   Practo for Animals
@@ -126,7 +126,7 @@ export default function RootPortal() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#161b22] via-[#161b22]/40 to-transparent" />
               <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
                 <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-amber-950 text-amber-300 border border-amber-500/30 uppercase tracking-wider font-mono">
-                  Deliverable 2
+                  Academy Platform
                 </span>
                 <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-white/90 text-slate-900">
                   Practical AI Cohorts
@@ -197,7 +197,7 @@ export default function RootPortal() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#161b22] via-[#161b22]/40 to-transparent" />
               <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
                 <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-500/30 uppercase tracking-wider font-mono">
-                  Deliverable 3
+                  Creative Studio
                 </span>
                 <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-white/90 text-slate-900">
                   Carousel Creator Studio
@@ -262,7 +262,7 @@ export default function RootPortal() {
       <footer className="border-t border-slate-800/80 bg-[#161b22]/70 py-6 text-xs text-slate-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-slate-400">
-            <span>Engineering Assessment by</span>
+            <span>Engineered with production rigor by</span>
             <strong className="text-white">Priyanshu Singh</strong>
             <span>•</span>
             <span className="font-mono text-emerald-400">priyanshusingh22340@gmail.com</span>

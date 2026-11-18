@@ -15,7 +15,7 @@ export default function SlideRenderer({
   totalSlides,
   template = 'minimal-editorial',
   aspectRatio = 'portrait', // 'portrait' (4:5) or 'square' (1:1)
-  authorName = 'NexaStudio / Founder',
+  authorName = 'Pawzz Studio',
   slideRef,
 }) {
   const isPortrait = aspectRatio === 'portrait';

@@ -259,7 +259,7 @@ export default function SlideEditor({
               totalSlides={slides.length}
               template={project.template}
               aspectRatio={aspectRatio}
-              authorName={project.targetAudience ? `For: ${project.targetAudience.slice(0, 22)}` : 'NexaStudio'}
+              authorName={project.targetAudience ? `For: ${project.targetAudience.slice(0, 22)}` : 'Pawzz Studio'}
             />
           </div>
         </div>

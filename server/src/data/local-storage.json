@@ -1,6 +1,68 @@
 {
   "providers": [
     {
+      "name": "Restart Persistence Clinic 1795011124346",
+      "category": "Veterinary Clinics",
+      "address": "100 Feet Road, Indiranagar",
+      "city": "Bengaluru",
+      "phone": "+91 80 1234 5678",
+      "emergencyPhone": "",
+      "email": "",
+      "website": "",
+      "openingHours": "Mon-Sat: 9:00 AM - 8:00 PM",
+      "services": [
+        "General Care"
+      ],
+      "facilities": [],
+      "description": "Comprehensive animal healthcare and welfare services.",
+      "isVerified": false,
+      "is24x7": false,
+      "rating": 5,
+      "reviewCount": 1,
+      "distanceKm": 3,
+      "reviews": [
+        {
+          "author": "PawNexus Verification Team",
+          "rating": 5,
+          "date": "2026-11-18",
+          "comment": "New listing submitted by owner. Verification badge pending administrative audit."
+        }
+      ],
+      "id": "pawnexus-prov-1795011124411",
+      "_id": "pawnexus-prov-1795011124411"
+    },
+    {
+      "name": "Alpha Vet Care Emergency Center",
+      "category": "Veterinary Clinics",
+      "address": "101 Marine Drive",
+      "city": "Mumbai",
+      "phone": "+91 22 9988 7766",
+      "emergencyPhone": "",
+      "email": "",
+      "website": "",
+      "openingHours": "Mon-Sat: 9:00 AM - 8:00 PM",
+      "services": [
+        "General Care"
+      ],
+      "facilities": [],
+      "description": "Comprehensive animal healthcare and welfare services.",
+      "isVerified": false,
+      "is24x7": false,
+      "rating": 5,
+      "reviewCount": 1,
+      "distanceKm": 3,
+      "reviews": [
+        {
+          "author": "PawNexus Verification Team",
+          "rating": 5,
+          "date": "2026-11-18",
+          "comment": "New listing submitted by owner. Verification badge pending administrative audit."
+        }
+      ],
+      "id": "pawnexus-prov-1795011114985",
+      "_id": "pawnexus-prov-1795011114985"
+    },
+    {
       "name": "Alpha Vet Care Emergency Center",
       "category": "Veterinary Clinics",
       "address": "101 Marine Drive",
@@ -830,6 +892,24 @@
   ],
   "projects": [
     {
+      "title": "Restart Persistence Carousel 1795011124346",
+      "topic": "Vector DBs in 2025",
+      "targetAudience": "Engineers",
+      "platform": "LinkedIn",
+      "slides": [
+        {
+          "slideNumber": 1,
+          "headline": "Vector DBs 101",
+          "description": "Embeddings explained"
+        }
+      ],
+      "id": "proj-1795011124434",
+      "_id": "proj-1795011124434",
+      "createdAt": "2026-11-18T14:12:04.434Z",
+      "updatedAt": "2026-11-18T14:12:04.434Z",
+      "status": "Draft"
+    },
+    {
       "title": "Restart Persistence Carousel 1794981199125",
       "topic": "Vector DBs in 2025",
       "targetAudience": "Engineers",
@@ -1026,6 +1106,17 @@
   ],
   "enquiries": [
     {
+      "id": "enq-1795011124429",
+      "fullName": "Vikram Mehta",
+      "email": "candidate.1795011124346@startup.io",
+      "phone": "+91 98200 11223",
+      "educationOrProfession": "Staff Engineer",
+      "programmeInterested": "Full-Stack AI Application Development",
+      "learningObjective": "Vector DB architecture",
+      "status": "New",
+      "createdAt": "2026-11-18T14:12:04.429Z"
+    },
+    {
       "id": "enq-1794981199216",
       "fullName": "Vikram Mehta",
       "email": "candidate.1794981199125@startup.io",
@@ -1098,9 +1189,73 @@
       "status": "Pending",
       "createdAt": "2026-11-18T06:04:16.978Z",
       "id": "corr-1794981856978"
+    },
+    {
+      "providerId": "pawnexus-prov-1794981856973",
+      "providerName": "Alpha Vet Care Emergency Center",
+      "submitterName": "Dr. Vikram",
+      "submitterEmail": "vikram@example.com",
+      "submitterPhone": "",
+      "relationshipToBusiness": "Customer/Visitor",
+      "correctionType": "Wrong Operating Hours",
+      "details": "Facility now open 24 hours on weekends.",
+      "status": "Pending",
+      "createdAt": "2026-11-18T14:11:54.987Z",
+      "id": "corr-1795011114987"
     }
   ],
   "workflowLogs": [
+    {
+      "id": "wf-log-1795011115001",
+      "timestamp": "2026-11-18T14:11:55.001Z",
+      "source": "n8n Webhook Listener",
+      "trigger": "n8n External Webhook",
+      "topic": "Scaling B2B SaaS from 0 to $1M ARR",
+      "status": "Ready for Human Review",
+      "tokensUsed": 1240,
+      "latencyMs": 0,
+      "humanApprovalStatus": "In Review",
+      "steps": [
+        {
+          "step": "Webhook Ingestion & Payload Validation",
+          "status": "Passed",
+          "durationMs": 15
+        },
+        {
+          "step": "AI Structured Schema Generation",
+          "status": "Completed",
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "id": "wf-log-1795011114999",
+      "timestamp": "2026-11-18T14:11:54.999Z",
+      "source": "Pawzz Intelligent AI Engine",
+      "trigger": "SlidePilot Project Wizard",
+      "topic": "How to Build Production AI Agents with n8n",
+      "status": "Completed",
+      "tokensUsed": 1240,
+      "latencyMs": 350,
+      "humanApprovalStatus": "Draft",
+      "steps": [
+        {
+          "step": "Validation",
+          "status": "Passed",
+          "durationMs": 20
+        },
+        {
+          "step": "Processing",
+          "status": "Completed",
+          "durationMs": 350
+        },
+        {
+          "step": "Finalization",
+          "status": "Passed",
+          "durationMs": 15
+        }
+      ]
+    },
     {
       "id": "wf-log-1794981856997",
       "timestamp": "2026-11-18T06:04:16.997Z",

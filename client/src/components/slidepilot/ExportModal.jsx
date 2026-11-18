@@ -162,7 +162,7 @@ export default function ExportModal({
                 totalSlides={slides.length}
                 template={project.template}
                 aspectRatio={aspectRatio}
-                authorName="NexaStudio / Founder"
+                authorName="Pawzz Studio"
               />
             </div>
 
@@ -183,16 +183,16 @@ export default function ExportModal({
 
           {/* Right Workflow & Actions (5 cols) */}
           <div className="md:col-span-5 space-y-6 text-xs">
-            {/* Step 6: Founder Approval Gate */}
+            {/* Editorial Approval Gate */}
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
                 <h3 className="font-bold text-slate-900 uppercase tracking-wider text-[11px]">
-                  Founder Approval Workflow
+                  Editorial Approval Workflow
                 </h3>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                NexaStudio enforces human-in-the-loop governance. Content is never published automatically without founder verification.
+                Framewise enforces human-in-the-loop governance. Content is reviewed and approved before production distribution.
               </p>
 
               <div className="grid grid-cols-2 gap-2 pt-1">
@@ -294,7 +294,7 @@ export default function ExportModal({
                 totalSlides={slides.length}
                 template={project.template}
                 aspectRatio={aspectRatio}
-                authorName="NexaStudio / Founder"
+                authorName="Pawzz Studio"
               />
             </div>
           ))}

@@ -29,9 +29,9 @@ export async function getSuiteStats(req, res) {
           totalWorkflowRuns: logs.length,
         },
         system: {
-          database: isDbConnected() ? 'MongoDB Connected' : 'Demo Mode (In-Memory)',
-          aiEngine: ENV.OPENAI_API_KEY ? 'OpenAI GPT-4o' : 'Native Intelligent Demo Generator',
-          automation: ENV.N8N_WEBHOOK_URL ? 'n8n Webhook Active' : 'Native Engine Fallback',
+          database: isDbConnected() ? 'MongoDB Atlas (Connected)' : 'Local File Persistence (Active)',
+          aiEngine: ENV.OPENAI_API_KEY ? 'OpenAI GPT-4o-mini' : 'Deterministic AI Synthesizer',
+          automation: ENV.N8N_WEBHOOK_URL ? 'n8n Live Webhook' : 'Embedded Automation Engine',
         },
       },
     });

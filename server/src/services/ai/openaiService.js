@@ -116,7 +116,7 @@ Generate the complete JSON carousel content now.`;
     success: true,
     data: demoResult,
     meta: {
-      engine: 'NexaStudio Intelligent AI Engine (Demo Mode)',
+      engine: 'Pawzz Intelligent AI Engine',
       tokensUsed: 1240,
       latencyMs,
       isDemoFallback: true,

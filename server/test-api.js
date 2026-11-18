@@ -22,7 +22,7 @@ app.use('/api/ai', aiRoutes);
 app.use('/api/automation', automationRoutes);
 app.use('/api/stats', statsRoutes);
 
-app.get('/api/health', (req, res) => res.json({ status: 'healthy', suite: 'NexaStudio' }));
+app.get('/api/health', (req, res) => res.json({ status: 'healthy', suite: 'Pawzz' }));
 
 const server = app.listen(5099, async () => {
   console.log('✅ Test server listening on http://127.0.0.1:5099');

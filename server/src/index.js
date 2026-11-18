@@ -43,10 +43,10 @@ app.use('/api/stats', statsRoutes);
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'healthy',
-    suite: 'NexaStudio Unified Backend',
+    suite: 'Pawzz Unified Platform',
     version: '1.0.0',
     timestamp: new Date().toISOString(),
-    demoModeActive: true,
+    environment: process.env.NODE_ENV || 'development',
   });
 });
 
@@ -66,11 +66,11 @@ async function startServer() {
   app.listen(PORT, () => {
     console.log(`
 ======================================================
-  🚀 NEXASTUDIO BACKEND API OPERATIONAL
-  📡 Running at: http://localhost:${PORT}
-  🐾 PawNexus API:       /api/providers
-  🎓 SkillSpring API:    /api/programmes & /api/enquiries
-  🎨 SlidePilot API:     /api/projects & /api/ai
+  🚀 PAWZZ PRODUCTION BACKEND OPERATIONAL
+  📡 Running at:         http://localhost:${PORT}
+  🐾 Pawzz Care API:     /api/providers
+  🎓 Upwise Academy API: /api/programmes & /api/enquiries
+  🎨 Framewise Studio:   /api/projects & /api/ai
   ⚙️ Automation Webhook:  /api/automation/slidepilot/webhook
 ======================================================
     `);
