@@ -189,7 +189,7 @@ export default function UpwiseHome() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
-                Learn Skills That Move Your <span className="text-amber-400 underline decoration-amber-500 decoration-wavy decoration-2">Career Forward</span>.
+                Learn Skills That Move Your <span className="text-amber-400">Career Forward</span>.
               </h1>
 
               <p className="text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed">

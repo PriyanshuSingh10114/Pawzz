@@ -162,7 +162,7 @@ export default function PawzzHome() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
-                Exceptional Healthcare for <span className="text-emerald-700 underline decoration-emerald-300 decoration-wavy decoration-2">Every Paw</span>.
+                Exceptional Healthcare for <span className="text-emerald-700">Every Paw</span>.
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
