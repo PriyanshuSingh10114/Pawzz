@@ -1,6 +1,37 @@
 {
   "providers": [
     {
+      "name": "Restart Persistence Clinic 1794981199125",
+      "category": "Veterinary Clinics",
+      "address": "100 Feet Road, Indiranagar",
+      "city": "Bengaluru",
+      "phone": "+91 80 1234 5678",
+      "emergencyPhone": "",
+      "email": "",
+      "website": "",
+      "openingHours": "Mon-Sat: 9:00 AM - 8:00 PM",
+      "services": [
+        "General Care"
+      ],
+      "facilities": [],
+      "description": "Comprehensive animal healthcare and welfare services.",
+      "isVerified": false,
+      "is24x7": false,
+      "rating": 5,
+      "reviewCount": 1,
+      "distanceKm": 3,
+      "reviews": [
+        {
+          "author": "PawNexus Verification Team",
+          "rating": 5,
+          "date": "2026-11-18",
+          "comment": "New listing submitted by owner. Verification badge pending administrative audit."
+        }
+      ],
+      "id": "pawnexus-prov-1794981199197",
+      "_id": "pawnexus-prov-1794981199197"
+    },
+    {
       "name": "Alpha Vet Care Emergency Center",
       "category": "Veterinary Clinics",
       "address": "101 Marine Drive",
@@ -24,46 +55,15 @@
         {
           "author": "PawNexus Verification Team",
           "rating": 5,
-          "date": "2026-11-17",
+          "date": "2026-11-18",
           "comment": "New listing submitted by owner. Verification badge pending administrative audit."
         }
       ],
-      "id": "pawnexus-prov-1794940863730",
-      "_id": "pawnexus-prov-1794940863730"
+      "id": "pawnexus-prov-1794981191725",
+      "_id": "pawnexus-prov-1794981191725"
     },
     {
-      "name": "Restart Persistence Clinic 1794940828277",
-      "category": "Veterinary Clinics",
-      "address": "100 Feet Road, Indiranagar",
-      "city": "Bengaluru",
-      "phone": "+91 80 1234 5678",
-      "emergencyPhone": "",
-      "email": "",
-      "website": "",
-      "openingHours": "Mon-Sat: 9:00 AM - 8:00 PM",
-      "services": [
-        "General Care"
-      ],
-      "facilities": [],
-      "description": "Comprehensive animal healthcare and welfare services.",
-      "isVerified": false,
-      "is24x7": false,
-      "rating": 5,
-      "reviewCount": 1,
-      "distanceKm": 3,
-      "reviews": [
-        {
-          "author": "PawNexus Verification Team",
-          "rating": 5,
-          "date": "2026-11-17",
-          "comment": "New listing submitted by owner. Verification badge pending administrative audit."
-        }
-      ],
-      "id": "pawnexus-prov-1794940828361",
-      "_id": "pawnexus-prov-1794940828361"
-    },
-    {
-      "id": "pawnexus-prov-001",
+      "id": "pawzz-prov-001",
       "name": "Crown Vet 24/7 Specialty Hospital",
       "category": "Veterinary Hospitals",
       "address": "Plot 14, Dr. E Moses Road, Worli, Mumbai, Maharashtra 400018",
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-002",
+      "id": "pawzz-prov-002",
       "name": "Cessna Lifeline Veterinary Hospital",
       "category": "Veterinary Hospitals",
       "address": "148, HBCS Layout, Domlur 2nd Stage, Bengaluru, Karnataka 560071",
@@ -149,7 +149,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-003",
+      "id": "pawzz-prov-003",
       "name": "Happy Paws Wellness & Vaccination Clinic",
       "category": "Veterinary Clinics",
       "address": "Shop 4, Sunrise Avenue, Sector 54, Gurugram, Delhi NCR 122011",
@@ -188,7 +188,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-004",
+      "id": "pawzz-prov-004",
       "name": "PetCare Diagnostics & Pathology Labs",
       "category": "Diagnostics",
       "address": "SCO 22, Near Metro Pillar 114, Kothrud, Pune, Maharashtra 411038",
@@ -227,7 +227,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-005",
+      "id": "pawzz-prov-005",
       "name": "Pawsome Haven Luxury Pet Boarding & Daycare",
       "category": "Pet Boarding",
       "address": "Sy 89, Gunjur - Doddakannelli Road, Varthur Hobli, Bengaluru, Karnataka 560087",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-006",
+      "id": "pawzz-prov-006",
       "name": "ResQ Wildlife & Community Animal Rescue NGO",
       "category": "Animal NGOs",
       "address": "Bavdhan Khurd, Near Chandani Chowk, Pune, Maharashtra 411021",
@@ -307,9 +307,9 @@
       ]
     },
     {
-      "id": "pawnexus-prov-007",
+      "id": "pawzz-prov-007",
       "name": "RapidPaw 24/7 Animal Ambulance Service",
-      "category": "Animal Ambulance",
+      "category": "Animal Ambulances",
       "address": "Andheri West Central Transit Hub, Mumbai, Maharashtra 400053",
       "city": "Mumbai",
       "distanceKm": 3.1,
@@ -345,7 +345,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-008",
+      "id": "pawzz-prov-008",
       "name": "Max Vets Specialized Animal Hospital",
       "category": "Veterinary Hospitals",
       "address": "R-55, Greater Kailash Part 1, New Delhi, Delhi 110048",
@@ -384,7 +384,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-009",
+      "id": "pawzz-prov-009",
       "name": "Friendicoes SECA Shelter & Veterinary Hospital",
       "category": "Animal NGOs",
       "address": "271 & 273, Flyover Market, Defence Colony, New Delhi, Delhi 110024",
@@ -422,7 +422,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-010",
+      "id": "pawzz-prov-010",
       "name": "Bark & Purr Holistic Feline & Canine Clinic",
       "category": "Veterinary Clinics",
       "address": "Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033",
@@ -460,7 +460,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-011",
+      "id": "pawzz-prov-011",
       "name": "PetVenture Farm Boarding & Retreat",
       "category": "Pet Boarding",
       "address": "Greenwood Valley, Mulshi Road, Pune Outskirts, Maharashtra 412108",
@@ -498,7 +498,7 @@
       ]
     },
     {
-      "id": "pawnexus-prov-012",
+      "id": "pawzz-prov-012",
       "name": "Blue Cross Animal Care & Diagnostics",
       "category": "Diagnostics",
       "address": "12, Inner Ring Road, Domlur, Bengaluru, Karnataka 560071",
@@ -540,7 +540,7 @@
     {
       "id": "prog-001",
       "slug": "generative-ai-fundamentals",
-      "title": "Generative AI Fundamentals & Practical Prompting",
+      "title": "Generative AI Fundamentals",
       "tagline": "Master foundation models, prompt engineering patterns, and multimodal tools.",
       "category": "Foundation",
       "duration": "6 Weeks",
@@ -549,6 +549,7 @@
       "seatsLeft": 8,
       "rating": 4.9,
       "enrolledCount": 1240,
+      "intendedAudience": "Students, Career Switchers & Non-technical Professionals",
       "highlights": [
         "Zero prior coding required",
         "Hands-on with GPT-4o, Claude 3.5 Sonnet, Midjourney & Whisper",
@@ -561,6 +562,7 @@
         "Combine vision and audio models into creative production pipelines",
         "Implement AI safety guardrails and evaluation criteria"
       ],
+      "practicalProject": "Build an automated research synthesis tool that extracts key insights from multi-page PDFs and outputs executive summaries.",
       "modules": [
         {
           "week": "Week 1",
@@ -610,8 +612,8 @@
     },
     {
       "id": "prog-002",
-      "slug": "ai-automation-workflow-engineering",
-      "title": "AI Automation & Workflow Engineering (n8n & Autonomous Agents)",
+      "slug": "ai-automation-workflow-design",
+      "title": "AI Automation and Workflow Design",
       "tagline": "Build production-grade automated agent workflows with n8n, webhooks and LLM nodes.",
       "category": "Automation",
       "duration": "8 Weeks",
@@ -620,6 +622,7 @@
       "seatsLeft": 5,
       "rating": 4.95,
       "enrolledCount": 890,
+      "intendedAudience": "Operations Specialists, Growth Marketers, Developers & Automation Enthusiasts",
       "highlights": [
         "Master n8n workflow creation from scratch",
         "Trigger automations via webhooks and event listeners",
@@ -632,6 +635,7 @@
         "Implement multi-agent loops with automated retry logic and exception handling",
         "Connect CRMs, Slack, Google Workspace, and relational databases into AI pipes"
       ],
+      "practicalProject": "Design and deploy an autonomous lead enrichment and content formatting pipeline with human approval gates.",
       "modules": [
         {
           "week": "Week 1-2",
@@ -673,16 +677,17 @@
     },
     {
       "id": "prog-003",
-      "slug": "ai-for-product-managers-business",
-      "title": "AI for Product Managers & Business Leaders",
+      "slug": "ai-for-product-management",
+      "title": "AI for Product Management",
       "tagline": "Strategize, scope, design, and ship high-ROI AI features with confidence.",
-      "category": "Leadership",
+      "category": "Product Leadership",
       "duration": "6 Weeks",
       "level": "All Levels",
       "cohortStart": "January 6, 2025",
       "seatsLeft": 12,
       "rating": 4.88,
       "enrolledCount": 1040,
+      "intendedAudience": "Product Managers, Founders, Design Leads & Business Strategists",
       "highlights": [
         "AI PRD (Product Requirement Document) frameworks",
         "Cost, latency & token economics modeling",
@@ -695,6 +700,7 @@
         "Design intuitive UI patterns for AI uncertainty, fallback, and user corrections",
         "Run evaluation benchmarks to prevent hallucination in production"
       ],
+      "practicalProject": "Draft a comprehensive AI PRD with technical latency budgeting, UX fallback patterns, and golden evaluation datasets.",
       "modules": [
         {
           "week": "Week 1-2",
@@ -727,16 +733,17 @@
     },
     {
       "id": "prog-004",
-      "slug": "fullstack-ai-engineering",
-      "title": "Full-Stack AI Application Development",
-      "tagline": "Build reactive web apps powered by LangChain, Vercel AI SDK, and Vector DBs.",
+      "slug": "fullstack-digital-product-development",
+      "title": "Full-Stack Digital Product Development",
+      "tagline": "Build reactive web apps powered by React, Node.js, vector embeddings, and LLM APIs.",
       "category": "Engineering",
       "duration": "10 Weeks",
-      "level": "Advanced (JS/React knowledge required)",
+      "level": "Intermediate to Advanced",
       "cohortStart": "January 13, 2025",
       "seatsLeft": 6,
       "rating": 4.96,
       "enrolledCount": 740,
+      "intendedAudience": "Frontend Developers, Full-Stack Engineers & Technical Founders",
       "highlights": [
         "React + Node.js + Pinecone/Qdrant + OpenAI stack",
         "Build production RAG (Retrieval-Augmented Generation)",
@@ -747,8 +754,9 @@
         "Architect end-to-end full-stack applications with streaming AI capabilities",
         "Implement document chunking, embeddings generation, and hybrid semantic search",
         "Manage session context, conversation history, and user authentication",
-        "Deploy robust production applications on Vercel and modern cloud providers"
+        "Deploy robust production applications on modern cloud providers"
       ],
+      "practicalProject": "Architect and ship a full-stack SaaS MVP featuring streaming AI responses, vector search, and responsive canvas export.",
       "modules": [
         {
           "week": "Week 1-2",
@@ -781,7 +789,7 @@
           "week": "Week 9-10",
           "title": "Final Capstone: Commercial SaaS Build",
           "topics": [
-            "Subscription billing with Stripe",
+            "Subscription billing architecture",
             "Multi-tenant tenant security",
             "Production deployment & launch"
           ]
@@ -791,7 +799,7 @@
   ],
   "projects": [
     {
-      "title": "Restart Persistence Carousel 1794940828277",
+      "title": "Restart Persistence Carousel 1794981199125",
       "topic": "Vector DBs in 2025",
       "targetAudience": "Engineers",
       "platform": "LinkedIn",
@@ -802,11 +810,107 @@
           "description": "Embeddings explained"
         }
       ],
-      "id": "proj-1794940828377",
-      "_id": "proj-1794940828377",
-      "createdAt": "2026-11-17T18:40:28.377Z",
-      "updatedAt": "2026-11-17T18:40:28.377Z",
+      "id": "proj-1794981199224",
+      "_id": "proj-1794981199224",
+      "createdAt": "2026-11-18T05:53:19.224Z",
+      "updatedAt": "2026-11-18T05:53:19.224Z",
       "status": "Draft"
+    },
+    {
+      "id": "sample-carousel-001",
+      "title": "10 AI Workflows That Can Save Students Hours Every Week",
+      "topic": "10 practical, proven AI workflows that help students and young professionals automate study notes, exam preparation, research synthesis, and job applications.",
+      "targetAudience": "Students & Young Professionals",
+      "platform": "LinkedIn",
+      "contentObjective": "Educate & Actionable Guide",
+      "tone": "Actionable, Inspiring & Practical",
+      "template": "editorial-minimal",
+      "slideCount": 10,
+      "status": "Approved",
+      "createdAt": "2024-11-18T08:00:00Z",
+      "updatedAt": "2024-11-18T09:30:00Z",
+      "slides": [
+        {
+          "slideNumber": 1,
+          "headline": "10 AI Workflows That Save Students 15+ Hours Every Week",
+          "description": "Stop spending countless late nights summarizing lecture PDFs and formatting citations. Here are 10 proven workflows that turn AI into your highest-leverage study partner.",
+          "visualType": "Hero Cover",
+          "tag": "Student Productivity",
+          "cta": "Swipe to unpack the 10 workflows ->"
+        },
+        {
+          "slideNumber": 2,
+          "headline": "The Core Problem: Passive Reading vs Active Synthesis",
+          "description": "Most students use AI as a lazy search engine. But when you treat LLMs as active Socratic sparring partners, retention triples and synthesis takes minutes instead of hours.",
+          "visualType": "Problem Statement",
+          "tag": "The Bottleneck",
+          "cta": "Let's dive into Workflow #1"
+        },
+        {
+          "slideNumber": 3,
+          "headline": "Workflow 1: Socratic Lecture Sparring",
+          "description": "Feed your lecture transcript to Claude or ChatGPT with the prompt: 'Act as my harsh oral exam professor. Ask me one concept question at a time and grade my answers.'",
+          "visualType": "Workflow 1",
+          "tag": "Active Recall",
+          "cta": "Save 3 hrs/week"
+        },
+        {
+          "slideNumber": 4,
+          "headline": "Workflow 2: Multi-Paper Literature Synthesis",
+          "description": "Upload 3 foundational papers into Perplexity or NotebookLM. Ask for a comparison matrix highlighting where researchers agree, contradict each other, and leave open gaps.",
+          "visualType": "Workflow 2",
+          "tag": "Research Matrix",
+          "cta": "Save 4 hrs/week"
+        },
+        {
+          "slideNumber": 5,
+          "headline": "Workflow 3: Formula Derivation Step-Back Prompting",
+          "description": "Never ask for the final answer. Ask: 'Guide me through the derivation of this formula using first principles, revealing one hint whenever I say CONTINUE.'",
+          "visualType": "Workflow 3",
+          "tag": "Deep Understanding",
+          "cta": "Save 2 hrs/week"
+        },
+        {
+          "slideNumber": 6,
+          "headline": "Workflow 4: Code Explainer with Mental Models",
+          "description": "Paste complex algorithmic code and ask: 'Explain this recursion using a real-world restaurant kitchen analogy. Then point out the edge case that breaks it.'",
+          "visualType": "Workflow 4",
+          "tag": "Coding & Debugging",
+          "cta": "Save 3 hrs/week"
+        },
+        {
+          "slideNumber": 7,
+          "headline": "Workflow 5: Resume & Cover Letter Tailoring",
+          "description": "Map job descriptions against your verified project achievements using strict JSON diffs to spot missing keywords and weak impact verbs before submitting.",
+          "visualType": "Workflow 5",
+          "tag": "Career Velocity",
+          "cta": "Save 2 hrs/week"
+        },
+        {
+          "slideNumber": 8,
+          "headline": "Practical Implementation: Build a Personal Prompt Bank",
+          "description": "Don't write prompts from scratch every day. Maintain a curated markdown cheat sheet in Obsidian or Notion with your top 5 calibrated system prompts.",
+          "visualType": "Practical Implementation",
+          "tag": "Workflow Habit",
+          "cta": "Avoid this trap ->"
+        },
+        {
+          "slideNumber": 9,
+          "headline": "Common Mistake: Blindly Trusting Unchecked Citations",
+          "description": "LLMs can confidently hallucinate page numbers and author years. Always verify citations using Google Scholar, PubMed, or Perplexity verified links.",
+          "visualType": "Common Mistakes",
+          "tag": "Quality Guardrail",
+          "cta": "Final Takeaway"
+        },
+        {
+          "slideNumber": 10,
+          "headline": "Which workflow will you try before your next exam?",
+          "description": "Bookmark this carousel for your study sessions. Share it with a friend who spends too many late nights buried under lecture slides.",
+          "visualType": "Call To Action",
+          "tag": "Share & Bookmark",
+          "cta": "Follow for weekly practical AI guides"
+        }
+      ]
     },
     {
       "id": "proj-101",
@@ -816,7 +920,7 @@
       "platform": "LinkedIn",
       "contentObjective": "Thought Leadership & Inbound Leads",
       "tone": "Actionable & Crisp",
-      "template": "minimal-editorial",
+      "template": "editorial-minimal",
       "slideCount": 8,
       "status": "Approved",
       "createdAt": "2024-11-15T10:30:00Z",
@@ -848,7 +952,7 @@
         },
         {
           "slideNumber": 4,
-          "headline": "3. SlidePilot — Auto Carousel & Pitch Decks",
+          "headline": "3. Framewise — Auto Carousel & Pitch Decks",
           "description": "Turn raw thoughts into high-engagement LinkedIn and Instagram carousels with strict JSON layout guarantees and 1-click PDF export.",
           "visualType": "Tool Highlight",
           "tag": "Social Thought Leadership",
@@ -887,73 +991,20 @@
           "cta": "Follow for daily AI founder systems"
         }
       ]
-    },
-    {
-      "id": "proj-102",
-      "title": "Veterinary Emergency Checklist: 5 Signs Never to Ignore",
-      "topic": "Crucial emergency symptoms in dogs and cats that require immediate hospital care within 60 minutes.",
-      "targetAudience": "Pet Parents, Dog and Cat Owners",
-      "platform": "Instagram",
-      "contentObjective": "Public Awareness & Community Education",
-      "tone": "Empathetic & Urgent",
-      "template": "modern-gradient",
-      "slideCount": 6,
-      "status": "Draft",
-      "createdAt": "2024-11-16T09:15:00Z",
-      "updatedAt": "2024-11-16T11:00:00Z",
-      "slides": [
-        {
-          "slideNumber": 1,
-          "headline": "5 Signs Your Pet Needs an Emergency Hospital Now",
-          "description": "When it comes to animal healthcare, minutes matter. Here are 5 critical symptoms that can never wait until tomorrow morning.",
-          "visualType": "Alert Hero",
-          "tag": "Pet Health Guide",
-          "cta": "Swipe to learn the warning signs ->"
-        },
-        {
-          "slideNumber": 2,
-          "headline": "1. Rapid, Shallow Breathing or Panting at Rest",
-          "description": "If your pet is panting without heat exposure or has gums turning pale or bluish, this signals acute respiratory distress or cardiac emergency.",
-          "visualType": "Symptom 1",
-          "tag": "Respiratory Danger",
-          "cta": "Rush to 24/7 ICU"
-        },
-        {
-          "slideNumber": 3,
-          "headline": "2. Unproductive Retching & Swollen Abdomen",
-          "description": "Especially in large-breed dogs, trying to vomit without bringing up food can indicate Gastric Dilatation-Volvulus (GDV). It requires immediate surgical intervention.",
-          "visualType": "Symptom 2",
-          "tag": "Gastric Emergency",
-          "cta": "Immediate Surgery Required"
-        },
-        {
-          "slideNumber": 4,
-          "headline": "3. Inability to Urinate (Especially Male Cats)",
-          "description": "Straining in the litter box without producing urine is a lethal urinary obstruction. Toxin buildup can cause heart failure within 24 hours.",
-          "visualType": "Symptom 3",
-          "tag": "Urinary Blockage",
-          "cta": "Fatal if delayed"
-        },
-        {
-          "slideNumber": 5,
-          "headline": "4. Sudden Collapse or Inability to Stand",
-          "description": "Sudden paralysis in hind legs or collapsing indicates severe internal bleeding, neurological trauma, or acute heart disease.",
-          "visualType": "Symptom 4",
-          "tag": "Neurological Alert",
-          "cta": "Immobilize & Transport"
-        },
-        {
-          "slideNumber": 6,
-          "headline": "Save PawNexus Emergency Numbers to Your Phone",
-          "description": "Do not wait for an emergency to find out where your nearest 24/7 veterinary hospital is located. Bookmark PawNexus and locate 24-hour trauma care in advance.",
-          "visualType": "Closing CTA",
-          "tag": "Be Prepared",
-          "cta": "Share this with fellow pet parents"
-        }
-      ]
     }
   ],
   "enquiries": [
+    {
+      "id": "enq-1794981199216",
+      "fullName": "Vikram Mehta",
+      "email": "candidate.1794981199125@startup.io",
+      "phone": "+91 98200 11223",
+      "educationOrProfession": "Staff Engineer",
+      "programmeInterested": "Full-Stack AI Application Development",
+      "learningObjective": "Vector DB architecture",
+      "status": "New",
+      "createdAt": "2026-11-18T05:53:19.216Z"
+    },
     {
       "id": "enq-1794940863745",
       "fullName": "Ananya Sharma",
@@ -990,9 +1041,73 @@
       "status": "Pending",
       "createdAt": "2026-11-17T18:41:03.735Z",
       "id": "corr-1794940863735"
+    },
+    {
+      "providerId": "pawzz-prov-001",
+      "providerName": "Crown Vet 24/7 Specialty Hospital",
+      "submitterName": "Dr. Vikram",
+      "submitterEmail": "vikram@example.com",
+      "submitterPhone": "",
+      "relationshipToBusiness": "Customer/Visitor",
+      "correctionType": "Wrong Operating Hours",
+      "details": "Facility now open 24 hours on weekends.",
+      "status": "Pending",
+      "createdAt": "2026-11-18T05:53:11.730Z",
+      "id": "corr-1794981191730"
     }
   ],
   "workflowLogs": [
+    {
+      "id": "wf-log-1794981191749",
+      "timestamp": "2026-11-18T05:53:11.749Z",
+      "source": "n8n Webhook Listener",
+      "trigger": "n8n External Webhook",
+      "topic": "Scaling B2B SaaS from 0 to $1M ARR",
+      "status": "Ready for Human Review",
+      "tokensUsed": 1240,
+      "latencyMs": 1,
+      "humanApprovalStatus": "In Review",
+      "steps": [
+        {
+          "step": "Webhook Ingestion & Payload Validation",
+          "status": "Passed",
+          "durationMs": 15
+        },
+        {
+          "step": "AI Structured Schema Generation",
+          "status": "Completed",
+          "durationMs": 1
+        }
+      ]
+    },
+    {
+      "id": "wf-log-1794981191741",
+      "timestamp": "2026-11-18T05:53:11.741Z",
+      "source": "NexaStudio Intelligent AI Engine (Demo Mode)",
+      "trigger": "SlidePilot Project Wizard",
+      "topic": "How to Build Production AI Agents with n8n",
+      "status": "Completed",
+      "tokensUsed": 1240,
+      "latencyMs": 351,
+      "humanApprovalStatus": "Draft",
+      "steps": [
+        {
+          "step": "Validation",
+          "status": "Passed",
+          "durationMs": 20
+        },
+        {
+          "step": "Processing",
+          "status": "Completed",
+          "durationMs": 351
+        },
+        {
+          "step": "Finalization",
+          "status": "Passed",
+          "durationMs": 15
+        }
+      ]
+    },
     {
       "id": "wf-log-1794940863761",
       "timestamp": "2026-11-17T18:41:03.761Z",

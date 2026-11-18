@@ -7,14 +7,11 @@ import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 
 // Pages
-import NexaHome from './pages/nexastudio/NexaHome';
-import PawNexusHome from './pages/pawnexus/PawNexusHome';
-import SkillSpringHome from './pages/skillspring/SkillSpringHome';
-import SlidePilotDashboard from './pages/slidepilot/SlidePilotDashboard';
-import SlidePilotCreate from './pages/slidepilot/SlidePilotCreate';
-import SlidePilotProjects from './pages/slidepilot/SlidePilotProjects';
-import SlidePilotTemplates from './pages/slidepilot/SlidePilotTemplates';
-import SlidePilotWorkflow from './pages/slidepilot/SlidePilotWorkflow';
+import RootPortal from './pages/RootPortal';
+import PawzzHome from './pages/pawzz/PawzzHome';
+import PawzzSearch from './pages/pawzz/PawzzSearch';
+import UpwiseHome from './pages/upwise/UpwiseHome';
+import FramewiseStudio from './pages/framewise/FramewiseStudio';
 
 export default function App() {
   return (
@@ -30,21 +27,23 @@ export default function App() {
           {/* Route Outlet */}
           <div className="flex-1">
             <Routes>
-              {/* Central Launchpad */}
-              <Route path="/" element={<NexaHome />} />
+              {/* Central Launchpad / Product Switcher */}
+              <Route path="/" element={<RootPortal />} />
 
-              {/* Product 1: PawNexus */}
-              <Route path="/pawnexus" element={<PawNexusHome />} />
+              {/* Product 1: Pawzz (Animal Healthcare Discovery) */}
+              <Route path="/pawzz" element={<PawzzHome />} />
+              <Route path="/pawzz/search" element={<PawzzSearch />} />
 
-              {/* Product 2: SkillSpring AI */}
-              <Route path="/skillspring" element={<SkillSpringHome />} />
+              {/* Product 2: Upwise (Practical AI Education) */}
+              <Route path="/upwise" element={<UpwiseHome />} />
 
-              {/* Product 3: SlidePilot */}
-              <Route path="/slidepilot" element={<SlidePilotDashboard />} />
-              <Route path="/slidepilot/create" element={<SlidePilotCreate />} />
-              <Route path="/slidepilot/projects" element={<SlidePilotProjects />} />
-              <Route path="/slidepilot/templates" element={<SlidePilotTemplates />} />
-              <Route path="/slidepilot/workflow" element={<SlidePilotWorkflow />} />
+              {/* Product 3: Framewise (Social Carousel Studio) */}
+              <Route path="/framewise" element={<FramewiseStudio />} />
+
+              {/* Backward compatibility aliases */}
+              <Route path="/pawnexus" element={<Navigate to="/pawzz" replace />} />
+              <Route path="/skillspring" element={<Navigate to="/upwise" replace />} />
+              <Route path="/slidepilot/*" element={<Navigate to="/framewise" replace />} />
 
               {/* Fallback */}
               <Route path="*" element={<Navigate to="/" replace />} />
@@ -61,4 +60,3 @@ export default function App() {
     </NotificationProvider>
   );
 }
-
